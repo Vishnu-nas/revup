@@ -1,10 +1,16 @@
-import React from 'react';
+import React,{useEffect, useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import {Navbar, Nav, NavDropdown,Container} from 'react-bootstrap';
 import Logo from '../images/logo.png';
 function NavBar() {
+  const [scroll, setScroll] = useState(false);
+  useEffect(()=>{
+    window.addEventListener("scroll", () => {
+        setScroll(window.scrollY > 50);
+      });
+  },[])
   return (
-  <div>
+  <div className={"menuNav " + (scroll ? "stickyMenu animated fadeInDown" : "staticMenu")}>
       <Navbar expand="lg" className="navBar">
         <Container>
             <Navbar.Brand href="#home" className="revupLogo">

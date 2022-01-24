@@ -42,6 +42,45 @@ a.revupLogo.navbar-brand img {
   opacity: .8;
   font-size: 16px;
 }
+.menuNav{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  background: transparent;
+  padding: 0;
+}
+.menuNav.stickyMenu{
+  background: #ffffffd1;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  transition: all 0.1s ease-out;
+  box-shadow: 0 4px 24px 0 rgb(103 151 255 / 10%), 0 12px 64px 0 rgb(103 151 255 / 10%);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+.navBar{
+  transition: all 1s;
+  position: relative;
+}
+.menuNav.stickyMenu .navBar{
+  background: #ffffffd1;
+  box-shadow: 0 4px 24px 0 rgb(103 151 255 / 10%), 0 12px 64px 0 rgb(103 151 255 / 10%);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  padding-top: 0.5rem !important;
+  transition: all 1s;
+}
+.menuNav.stickyMenu .navBar .navbar-nav .nav-link{
+  color: #191919 !important;
+  opacity: 1;
+  font-size: 16px;
+}
 .navbar-light .navbar-toggler-icon{
   background-image: url("data:image/svg+xml,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255,255,255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>") !important;
 }

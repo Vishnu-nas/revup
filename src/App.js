@@ -1,4 +1,5 @@
 import './App.scss';
+import './css/animate.css';
 import Home from './Pages/Home';
 import {
   BrowserRouter,
