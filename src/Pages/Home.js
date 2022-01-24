@@ -19,7 +19,7 @@ import NavBar from '../Componants/NavBar'
 import CarSlider from '../Componants/CarSlider'
 import Footer from '../Componants/Footer'
 function Home() {
-  return (
+  return ( 
         <div>
             <NavBar/>
             <div className="bannerSec" style={{ backgroundImage: `url('${bg}')` }}>
