@@ -1,0 +1,37 @@
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
+import {Navbar, Nav, NavDropdown,Container} from 'react-bootstrap';
+import Logo from '../images/logo.png';
+function NavBar() {
+  return (
+  <div>
+      <Navbar expand="lg" className="navBar">
+        <Container>
+            <Navbar.Brand href="#home" className="revupLogo">
+                <img src={Logo} alt="Logo Revup" />
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto1">
+                <Nav.Link href="#home">Home</Nav.Link>
+                <Nav.Link href="#link">Shop</Nav.Link>
+                {/* <NavDropdown title="Services" id="basic-nav-dropdown">
+                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                </NavDropdown> */}
+                <Nav.Link href="#Works">How it Works</Nav.Link>
+                <Nav.Link href="#FAQ">FAQ's</Nav.Link>
+                <Nav.Link href="#Contact">Contact</Nav.Link>
+                <Nav.Link href="#Login" className='loginRup menuReg'>Login</Nav.Link>
+                <Nav.Link href="#Sign Up" className='signRup menuReg'>Sign Up</Nav.Link>
+            </Nav>
+            </Navbar.Collapse>
+        </Container>
+    </Navbar>
+  </div>
+  );
+}
+
+export default NavBar;
