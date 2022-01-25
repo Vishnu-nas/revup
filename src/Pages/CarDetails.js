@@ -26,7 +26,7 @@ function carDetails() {
             </div>
         </div>
         <CustomerReview />
-        <BookCabCta />
+        <BookCabCta noBg/>
         <GadgetCta />
         <Footer />
     </div>

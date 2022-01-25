@@ -1,9 +1,9 @@
 import React from 'react';
 import ctaBg from '../images/ctahm.png' 
 
-function BookCabCta() {
+function BookCabCta(props) {
   return (
-    <div className="contactCta">
+    <div className={"contactCta " + (props.noBg ? "noBg" : "normalBg")} >
         <div className="container">
             <div className="row m-0">
                 <div className="ctaRow" style={{ backgroundImage: `url('${ctaBg}')` }}>

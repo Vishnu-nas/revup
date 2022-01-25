@@ -148,7 +148,7 @@ function Home() {
                 </div>
             </div>
             <Faqs/>
-            <ShopCta />
+            <ShopCta/>
             <Footer/>
         </div>
   );
