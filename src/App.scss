@@ -10,6 +10,7 @@ html{
 h1,h2,h3,h4,span,p{
   font-family: Source Sans Pro;
 }
+
 .pt60{
   padding-top: 60px;
 }
@@ -18,6 +19,12 @@ h1,h2,h3,h4,span,p{
 }
 #basic-navbar-nav{
   justify-content: flex-end;
+}
+p{
+  @include responsive(phone){
+    font: normal normal 300 16px/30px Source Sans Pro !important;
+    margin-bottom: 15px;
+  }  
 }
 .navBar{
   position: absolute !important;
@@ -617,6 +624,9 @@ a.revupLogo.navbar-brand img {
         opacity: 1;
         margin-bottom: 20px;
         display: inline-block;
+        @include responsive(phone){
+          font: normal normal 200 18px/0 Source Sans Pro;
+        }
       }
       & h2{
         font: normal normal 200 39px/40px Source Sans Pro;
@@ -865,9 +875,15 @@ a.revupLogo.navbar-brand img {
   }
    &.fif{
     padding-right: 200px;
+    @include responsive(phone){
+      padding-right: 0;
+    }
    }
    &.fis{
      padding-right: 100px;
+     @include responsive(phone){
+      padding-right: 0;
+    }
    }
    & h3{
     font: normal normal 200 27px/35px Source Sans Pro;
@@ -932,6 +948,10 @@ a.revupLogo.navbar-brand img {
     justify-content: space-between;
     align-items: center;
     padding: 25px 0 30px;
+    @include responsive(phone){
+      display: block;
+      text-align: center;
+    }
    & .cpL p{
     font: normal normal 300 16px/32px Source Sans Pro;
     letter-spacing: 0px;
@@ -970,6 +990,10 @@ a.revupLogo.navbar-brand img {
         letter-spacing: 0px;
         color: #F6491E;
         opacity: 1;
+        @include responsive(phone){
+          font: normal normal 300 40px Source Sans Pro;
+          margin-bottom: 15px;
+        }  
       }
       & p{
         text-align: center;
@@ -997,6 +1021,12 @@ a.revupLogo.navbar-brand img {
     @include border-radius(12px);
     overflow: hidden;
     & .bnRow{
+      > .colPdLeft{
+        padding: 0;
+      }
+      > .colPdRight{
+        padding: 0;
+      }
       align-items: center;
       border-radius: 12px;
       padding: 40px;      
@@ -1004,6 +1034,9 @@ a.revupLogo.navbar-brand img {
       @include border-radius(12px);
       & .pdLeft{
         padding: 0 30px;
+        @include responsive(phone){
+          padding-bottom: 30px;
+        }
         & img{
           max-width: 100%;
         }
@@ -1014,6 +1047,9 @@ a.revupLogo.navbar-brand img {
           letter-spacing: 0px;
           color: #110403;
           opacity: 1;
+          @include responsive(phone){
+            font: normal normal 300 28px Source Sans Pro;
+          }
         }
         & .review{
           & span{
@@ -1035,6 +1071,9 @@ a.revupLogo.navbar-brand img {
         }
         & .priceForCar{
           padding-top: 30px;
+          @include responsive(phone){
+            padding-top: 20px;
+          }
           & h2{
             font: normal normal 600 37px Segoe UI;
             letter-spacing: 0px;
@@ -1042,6 +1081,9 @@ a.revupLogo.navbar-brand img {
             text-transform: uppercase;
             opacity: 1;
             margin-bottom: 0;
+              @include responsive(phone){
+                font: normal normal 600 28px Segoe UI;
+              }
             & span{
               font: normal normal 300 20px Segoe UI;
               letter-spacing: 0px;
@@ -1068,6 +1110,10 @@ a.revupLogo.navbar-brand img {
       justify-content: space-between;
       align-content: center;
       padding: 20px 40px;
+      @include responsive(phone){
+        display: block;
+        padding: 30px 40px;
+      }
       & .enqLeft{
         display: flex;
         align-items: center;
@@ -1075,7 +1121,14 @@ a.revupLogo.navbar-brand img {
         flex: 1;        
         max-width: 70%;
         width: 100%;
+        @include responsive(phone){
+          display: block;
+        }
         & .elItem{
+          @include responsive(phone){
+            margin-bottom: 25px;
+          }
+          
           > span{
             & i{
               margin-right: 5px;
@@ -1086,6 +1139,9 @@ a.revupLogo.navbar-brand img {
             letter-spacing: 0px;
             color: #FFFFFF;
             opacity: 0.68;
+            @include responsive(Exsmall){
+              font: normal normal 600 16px Source Sans Pro;
+            }
           }
           & h3{
             margin-bottom: 0;
@@ -1096,6 +1152,9 @@ a.revupLogo.navbar-brand img {
             display: flex;
             align-items: center;
             margin-top: 4px;
+            @include responsive(Exsmall){
+              font: normal normal 600 22px Source Sans Pro;
+            }
             & i{
               opacity: 0.61;
               margin-left: 10px;
@@ -1113,6 +1172,10 @@ a.revupLogo.navbar-brand img {
           text-transform: uppercase;
           opacity: 1;
           border-radius: 4px;
+          @include responsive(phone){
+            padding: 10px 30px;
+            margin-top: 20px;
+          }
         }
       }
     }
@@ -1134,6 +1197,9 @@ a.revupLogo.navbar-brand img {
     & .colSpec{
       & .specItem{
         margin-bottom: 25px;
+        @include responsive(Exsmall){
+          margin-bottom: 10px;
+        }
         & .sitemHd{
           > span{
             font: normal normal 300 20px/28px Source Sans Pro;
@@ -1196,6 +1262,9 @@ a.revupLogo.navbar-brand img {
 
 .cusReview{
   padding: 60px 0;
+  @include responsive(phone){
+    padding: 40px 0;
+  }
   & h2{
     font: normal normal 200 39px/61px Source Sans Pro;
     letter-spacing: 0px;
@@ -1206,6 +1275,10 @@ a.revupLogo.navbar-brand img {
     & .colReview{
       padding-right: 100px;
       padding-top: 50px;
+      @include responsive(phone){
+        padding-top: 20px;
+        padding-right: 0;
+      }
       & .reviewHd{
         display: flex;
         align-items: center;

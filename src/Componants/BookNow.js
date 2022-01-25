@@ -7,12 +7,12 @@ function BookNow() {
             <div className="container">
                 <div className="wrapBookNow">
                     <div className="row bnRow">
-                        <div className="col-lg-5 col-sm-12">
+                        <div className="col-lg-5 col-sm-12 colPdLeft">
                             <div className="pdLeft">
                                 <img src={Car2} alt="" />
                             </div>
                         </div>
-                        <div className="col-lg-7 col-sm-12">
+                        <div className="col-lg-7 col-sm-12 colPdRight">
                             <div className="pdRight">
                                 <h2>Lamborghini Aventador</h2>
                                 <div class="review">
