@@ -983,6 +983,9 @@ a.revupLogo.navbar-brand img {
 .spBanner.bannerSec{
     height: auto;
     padding: 160px 0;
+    @include responsive(Exsmall){
+      padding: 100px 0;
+    }
     & .spRow{
       text-align: center;
       & h1{
@@ -1127,7 +1130,7 @@ a.revupLogo.navbar-brand img {
         & .elItem{
           @include responsive(phone){
             margin-bottom: 25px;
-          }
+          } 
           
           > span{
             & i{
