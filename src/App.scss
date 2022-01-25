@@ -7,6 +7,9 @@ $tab-landscape : 1400px;
 html{
   overflow-x: hidden;
 }
+h1,h2,h3,h4,span,p{
+  font-family: Source Sans Pro;
+}
 .pt60{
   padding-top: 60px;
 }
@@ -976,4 +979,275 @@ a.revupLogo.navbar-brand img {
         }
       }
     }
+}
+
+// BookNow
+.bookNowSection{
+  background: #F6F6F6 0% 0% no-repeat padding-box;
+  padding-bottom: 60px;
+  & .wrapBookNow{
+    background-color: #fff;
+    margin-top: -60px;
+    position: relative;
+    box-shadow: 0px 0px 48px #00000008;
+    @include border-radius(12px);
+    overflow: hidden;
+    & .bnRow{
+      align-items: center;
+      border-radius: 12px;
+      padding: 40px;      
+      margin: 0;
+      @include border-radius(12px);
+      & .pdLeft{
+        padding: 0 30px;
+        & img{
+          max-width: 100%;
+        }
+      }
+      & .pdRight{
+        h2{
+          font: normal normal 300 31px Source Sans Pro;
+          letter-spacing: 0px;
+          color: #110403;
+          opacity: 1;
+        }
+        & .review{
+          & span{
+            text-align: left;
+            font: normal normal normal 18px Source Sans Pro;
+            letter-spacing: 0px;
+            color: #110403;
+            opacity: 1;
+            & i{
+              color: #ffd816;
+              margin-right: 2px;
+            }
+            &.r-count{
+              color: #F6491E;
+              display: inline-block;
+              padding-left: 10px;
+            }
+          }
+        }
+        & .priceForCar{
+          padding-top: 30px;
+          & h2{
+            font: normal normal 600 37px Segoe UI;
+            letter-spacing: 0px;
+            color: #110403;
+            text-transform: uppercase;
+            opacity: 1;
+            margin-bottom: 0;
+            & span{
+              font: normal normal 300 20px Segoe UI;
+              letter-spacing: 0px;
+              color: #110403;
+              opacity: 0.59;
+              text-transform: lowercase;
+            }
+          }
+          & .carAlert{
+            letter-spacing: 0px;
+            color: #F6491E;
+            opacity: 1;
+            i{
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+    & .enquiryArea{
+      background: #F6491E 0% 0% no-repeat padding-box;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      align-content: center;
+      padding: 20px 40px;
+      & .enqLeft{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1;        
+        max-width: 70%;
+        width: 100%;
+        & .elItem{
+          > span{
+            & i{
+              margin-right: 5px;
+            }
+          }
+          & span{
+            font: normal normal 300 20px Source Sans Pro;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+            opacity: 0.68;
+          }
+          & h3{
+            margin-bottom: 0;
+            font: normal normal 600 28px Source Sans Pro;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+            opacity: 1;
+            display: flex;
+            align-items: center;
+            margin-top: 4px;
+            & i{
+              opacity: 0.61;
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+      & .enqRight{
+        .btnBn{
+          border: none;
+          padding: 20px 40px;
+          font: normal normal 600 18px/26px Segoe UI;
+          letter-spacing: 0px;
+          color: #F6491E;
+          text-transform: uppercase;
+          opacity: 1;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
+
+// Specification
+
+.specifications{
+  padding: 60px 0;
+  & h2{
+    font: normal normal 200 39px/61px Source Sans Pro;
+    letter-spacing: 0px;
+    color: #110403;
+    opacity: 1;
+  }
+  & .specRow{
+    padding-top: 20px;
+    & .colSpec{
+      & .specItem{
+        margin-bottom: 25px;
+        & .sitemHd{
+          > span{
+            font: normal normal 300 20px/28px Source Sans Pro;
+            letter-spacing: 0px;
+            color: #110403;
+            opacity: 1;
+          }
+        }
+        & .sitemCon{
+          line-height: 48px;
+          display: flex;
+          align-items: center;
+          & .sitemThumb{
+            display: flex;
+            & img{
+              width: 24px;
+              height: 34px;
+              object-fit: contain;
+            }
+          }
+          & .sitemRight{
+            span{
+              font: normal normal normal 27px/61px Source Sans Pro;
+              letter-spacing: 0px;
+              color: #110403;
+              opacity: 1;
+              padding-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Description
+
+.description{
+  background: #F6F6F6 0% 0% no-repeat padding-box;
+  padding: 60px 0;
+  & .decHd{
+    & h2{
+      font: normal normal 200 39px/61px Source Sans Pro;
+      letter-spacing: 0px;
+      color: #110403;
+      opacity: 1;
+    }
+  }
+  & .decCon{
+    & p{
+      font: normal normal 300 20px/34px Source Sans Pro;
+      letter-spacing: 0px;
+      color: #110403;
+      opacity: 0.91;
+    }
+  }
+}
+
+// customer review
+
+.cusReview{
+  padding: 80px 0;
+  & h2{
+    font: normal normal 200 39px/61px Source Sans Pro;
+    letter-spacing: 0px;
+    color: #110403;
+    opacity: 1;
+  }
+  & .crRow{
+    & .colReview{
+      padding-right: 100px;
+      padding-top: 50px;
+      & .reviewHd{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        & .rhdThumb{
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          overflow: hidden;
+          & img{
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+          }
+        }
+        & .rhdReview{
+          & h2{
+            font: normal normal normal 22px/32px Source Sans Pro;
+            margin-bottom: 0;
+            span{
+              font: normal normal 300 20px/28px Source Sans Pro;
+              letter-spacing: 0px;
+              color: #110403;
+              opacity: 0.49;
+            }
+          }
+          & .reviewStar{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 2px;
+            & i{
+              color: #FFD816;
+            }
+          }
+        }
+      }
+      & .cusComment{
+        margin-top: 10px;
+        & p{
+          font: normal normal 300 20px/34px Source Sans Pro;
+          letter-spacing: 0px;
+          color: #110403;
+          opacity: 0.91;
+        }
+      }
+    }
+  }
 }

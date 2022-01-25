@@ -8,16 +8,16 @@ import servCar from '../images/bnrCar1.png'
 import Deal from '../images/deal.svg'
 import dollar from '../images/dollar.svg'
 import call from '../images/call.svg'
-import shirt from '../images/shirt.png'
 import car from '../images/car.png'
 import location from '../images/location.png'
 import book from '../images/book.png'
-import iphone from '../images/iphone.png'
-import graph from '../images/graph.png'
 import Faqs from '../Componants/Faqs';
 import NavBar from '../Componants/NavBar'
 import CarSlider from '../Componants/CarSlider'
 import Footer from '../Componants/Footer'
+import ShopCta from '../Componants/ShopCta';
+import GadgetCta from '../Componants/GadgetCta';
+import BookCabCta from '../Componants/BookCabCta';
 function Home() {
   return ( 
         <div>
@@ -54,16 +54,7 @@ function Home() {
             <div className="prodSlider">
                 <CarSlider/> 
             </div>
-            <div className="contactCta">
-                <div className="container">
-                    <div className="row m-0">
-                        <div className="ctaRow" style={{ backgroundImage: `url('${ctaBg}')` }}>
-                            <h2>Do you want to book a cab for your party program?</h2>
-                            <button>CONTACT US</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <BookCabCta />
             <div className="servicesSec">                
                 <div className="container">
                 <div className="servHd">
@@ -112,24 +103,7 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <div className="shopCta">
-                <div className="container">
-                    <div className="row shopCtaRow" style={{ backgroundImage: `url('${ctaBg}')` }}>
-                        <div className="col-lg-6 h100 colSctaLeft">
-                            <div className="shpGadL">
-                                <span>SHOP GADGETS</span>
-                                <h2>Deliver to Anywhere in the World</h2>
-                                <button>Shop</button>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 h100 colSctaRight">
-                            <div className="shpImgRight h100">
-                                <img src={shirt} alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <GadgetCta />
             <div className="howItWork pt60 pb60">
                 <div className="container">
                     <div className="secHd">
@@ -174,33 +148,7 @@ function Home() {
                 </div>
             </div>
             <Faqs/>
-            <div className="shopCta DownloadCta">
-                <div className="container">
-                    <div className="row shopCtaRow DownloadCtaRow" style={{ backgroundImage: `url('${graph}')` }}>
-                        <div className="col-lg-4 h100 colSctaLeft">
-                            <div className="shpGadL">
-                                <div className="ddLeft">
-                                    <h2>Download the free Revup App Now</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                                <div className="bnrLBtns">
-                                        <div className="btnbnr">
-                                            <img src={appStore} alt="" />
-                                        </div>
-                                        <div className="btnbnr">
-                                            <img src={gplay} alt="" />
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 h100 colSctaRight">
-                            <div className="shpImgRight h100 sctaRt">
-                                <img src={iphone} alt="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <ShopCta />
             <Footer/>
         </div>
   );
