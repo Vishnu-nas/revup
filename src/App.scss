@@ -63,16 +63,13 @@ a.revupLogo.navbar-brand img {
   box-shadow: 0 4px 24px 0 rgb(103 151 255 / 10%), 0 12px 64px 0 rgb(103 151 255 / 10%);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
+  height: 75px;
 }
-.navBar{ 
+.navBar{
   transition: all 1s;
   position: relative;
 }
 .menuNav.stickyMenu .navBar{
-  background: #ffffffd1;
-  box-shadow: 0 4px 24px 0 rgb(103 151 255 / 10%), 0 12px 64px 0 rgb(103 151 255 / 10%);
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
   padding-top: 0.5rem !important;
   transition: all 1s;
 }
@@ -949,4 +946,34 @@ a.revupLogo.navbar-brand img {
     }
    }
  }
+}
+
+
+// Car Details Page
+
+// Single product Banner
+
+.spBanner.bannerSec{
+    height: auto;
+    padding: 160px 0;
+    & .spRow{
+      text-align: center;
+      & h1{
+        font: normal normal 200 54px/61px Source Sans Pro;
+        letter-spacing: 0px;
+        color: #F6491E;
+        opacity: 1;
+      }
+      & p{
+        text-align: center;
+        font: normal normal 300 22px/32px Source Sans Pro;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        opacity: 0.69;
+        @include responsive(device1200){
+          width: 45%;
+          margin: auto;
+        }
+      }
+    }
 }
