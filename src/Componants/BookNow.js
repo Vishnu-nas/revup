@@ -1,11 +1,19 @@
 import React,{useState} from 'react';
 import Car2 from '../images/car2.png'
 import DurationPopUp from './DurationPopUp';
+import LocationPopUp from './LocationPopUp';
+import TimeDatePopUp from './TimeDatePopUp';
 function BookNow() {
-  const [show, setShow] = useState(false);
+  const [duration, setDuration] = useState(false);
+  const [timeDate, setTimeDate] = useState(false);
+  const [location, setLocation] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleDurationClose = () => setDuration(false);
+  const handleDurationShow = () => setDuration(true);
+  const handletimeDateClose = () => setTimeDate(false);
+  const handletimeDateShow = () => setTimeDate(true);
+  const handleLocationClose = () => setLocation(false);
+  const handleLocationShow = () => setLocation(true);
   return (
     <div>
         <div className="bookNowSection">
@@ -34,15 +42,15 @@ function BookNow() {
                     </div>
                     <div className="enquiryArea">
                         <div className="enqLeft">
-                            <div className="elItem durBtn" onClick={handleShow}>
+                            <div className="elItem durBtn" onClick={handleDurationShow}>
                                 <span><i class="fas fa-stopwatch"></i> Duration</span>
                                 <h3>Set Duration <i class="fad fa-angle-right"></i></h3>
                             </div>
-                            <div className="elItem dtBtn">
+                            <div className="elItem dtBtn" onClick={handletimeDateShow}>
                                 <span><i class="fas fa-clock"></i> Ride Date & Time</span>
                                 <h3>Choose Date & Time <i class="fad fa-angle-right"></i></h3>
                             </div>
-                            <div className="elItem locBtn">
+                            <div className="elItem locBtn" onClick={handleLocationShow}>
                                 <span><i class="fad fa-map-marker-alt"></i> Set Pickup Location</span>
                                 <h3>Set Location <i class="fad fa-angle-right"></i></h3>
                             </div>
@@ -59,7 +67,13 @@ function BookNow() {
             </div>
         </div>
         {
-            show && <DurationPopUp handleClose={handleClose} show={show} handleShow={handleShow}/>
+            duration && <DurationPopUp handleDurationClose={handleDurationClose} duration={duration} handleDurationShow={handleDurationShow}/>
+        }
+        {
+            timeDate && <TimeDatePopUp handletimeDateClose={handletimeDateClose} timeDate={timeDate} handletimeDateShow={handletimeDateShow}/>
+        }
+        {
+            location && <LocationPopUp handleLocationClose={handleLocationClose} location={location}/>
         }
     </div>
   );

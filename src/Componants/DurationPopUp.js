@@ -1,10 +1,10 @@
 import React,{useState} from 'react';
 import { Button, Modal,Form  } from 'react-bootstrap';
-function DurationPopUp({show,handleClose}) {
+function DurationPopUp({duration,handleDurationClose}) {
   const [radio,setRadio] = useState('false')
   return (
     <div>
-      <Modal show={show} onHide={handleClose} className='modalDuration'>
+      <Modal show={duration} onHide={handleDurationClose} className='modalDuration'>
         <Modal.Header closeButton>
           <Modal.Title>Set Duration</Modal.Title>
         </Modal.Header>
@@ -32,10 +32,10 @@ function DurationPopUp({show,handleClose}) {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose} className='closeBtn'>
+          <Button variant="secondary" onClick={handleDurationClose} className='closeBtn'>
             Cancel 
           </Button>
-          <Button variant="primary" onClick={handleClose} className='saveBtn'>
+          <Button variant="primary" onClick={handleDurationClose} className='saveBtn'>
             Done
           </Button>
         </Modal.Footer>

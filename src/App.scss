@@ -1334,6 +1334,7 @@ a.revupLogo.navbar-brand img {
 }
 
 // modal Duration
+
 .modalDuration{
   & .modal-dialog{
     max-width: 600px;
@@ -1412,14 +1413,15 @@ a.revupLogo.navbar-brand img {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 15px;
     & .form-check-inline{    
       flex: 1 0 20%;
-      margin: 5px;  
-      padding: 10px 12px;
+      padding: 10px 15px;
       box-shadow: 0px 0px 48px #00000008;
       border: 0.5px solid #F6491E;
-      border-radius: 6px;
+      border-radius: 20px;
       position: relative;
+      margin-right: 0;
       cursor: pointer;
       & input{
         border: 1px solid #f7633e;
@@ -1449,4 +1451,257 @@ a.revupLogo.navbar-brand img {
       }
     }
   }
+}
+.modal-header{
+  border-bottom: none;
+}
+.modal-footer{
+  padding-top: 20px;
+}
+.modalTimeDate
+{
+  & .modal-dialog{
+    max-width: 600px;
+  }
+  .modal-content{
+    & .modal-header{
+      & .modal-title{
+        font: normal normal 200 31px Source Sans Pro;
+        letter-spacing: 0px;
+        color: #110403;
+      }
+    }
+    & .modal-footer{
+      & .closeBtn{
+        background-color: #ffffff;
+        border-color: #6c757d;
+        font: normal normal 600 14px/26px Segoe UI;
+        letter-spacing: 0px;
+        color: #110403;
+        text-transform: uppercase;
+        opacity: 1;
+        min-width: 150px;
+      }
+      & .saveBtn{
+        background: #F6491E 0% 0% no-repeat padding-box;
+        border-radius: 4px;
+        border-color: #F6491E;
+        font: normal normal 600 14px/26px Segoe UI;
+        letter-spacing: 0px;
+        color: #110403;
+        text-transform: uppercase;
+        opacity: 1;
+        min-width: 150px;
+        color: #fff;
+      }
+    }
+  }
+  & .chooseTimeSlot{ 
+    position: relative;
+    padding: 20px 30px 10px;
+    &::before{
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      content: "";
+      top: 0;
+      left: 0;
+      background-color: #000;
+      opacity: .2;
+      padding: 0;
+    }
+    & h3{
+      font: normal normal normal 22px/35px Source Sans Pro;
+      letter-spacing: 0px;
+      color: #110403;
+      opacity: 1;
+      margin: 0;
+    }
+    & .radio {
+      &-input {
+        visibility: hidden;
+      }
+    
+      &-label {
+        position: relative;
+        padding-left: 35px;
+        &:after {
+          content: "";
+          display: block;
+          width: 12px;
+          height: 12px;
+          position: absolute;
+          left: 4px;
+          top: 4px;
+          border-radius: 50%;
+        }
+      }
+    
+      &-border {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        outline: solid 3px #d449e3;
+        border-radius: 50%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+      }
+      &-input:checked + &-label:after {
+        transition: all 0.5s;
+        background-color: #64236b;
+      }
+    }
+    & form{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 15px;
+      & .form-check-inline{    
+        flex: 1 0 20%;
+        padding: 20px 10px;
+        box-shadow: 0px 0px 48px #00000008;
+        border: 0.5px solid #F6491E;
+        border-radius: 20px;
+        position: relative;
+        margin-right: 0;
+        cursor: pointer;
+        & input{
+          display: none;
+          &:checked{
+            background-color: #F6491E;
+            border-color: #F6491E;
+          }
+        }
+        & input:checked + label{
+          background-color: #F6491E;
+          border-color: #F6491E;
+          color: #fff;
+        }
+        & label{
+          cursor: pointer;
+          width: 100%;
+          position: absolute;
+          height: 100%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+}
+.react-calendar {
+  width: 100% !important;
+  max-width: 100% !important;
+  background: white;
+  border: none !important; 
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.125em;
+}
+.react-calendar__month-view {
+  padding-bottom: 20px;
+  position: relative;
+}
+.react-calendar__navigation button{
+  font-size: 28px;
+}
+.react-calendar__month-view__weekdays__weekday{
+    font: normal normal 600 18px Source Sans Pro;
+    letter-spacing: 0.36px;
+    color: #110403;
+    opacity: 0.38;
+    text-decoration: none;
+    & abbr{
+      text-decoration: none !important;
+    }
+}
+.react-calendar__tile{
+  &--now{
+    background: none !important;
+  }
+  &--active {
+    background: none !important;
+    color: #F6491E !important;
+    & abbr{
+      width: 35px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      border-radius: 50%;
+      border: 1px solid #F6491E;
+    }
+  }
+  & abbr{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+}
+.chooseLocation{
+  & .locationItem{
+    margin-bottom: 15px;
+    position: relative;
+    input[type="radio"]{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      &:checked + .liwrap{
+        border-color: #F6491E;
+      }
+      &:checked + .liwrap{
+        .liwLeft{
+          i{
+            color: #F6491E;
+          }
+        }
+      }
+    }
+    & .liwrap{
+      display: flex;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      align-items: center;
+      gap: 15px;
+      box-shadow: 0px 0px 48px #00000008;
+      border: 0.5px solid #A5A5A5;
+      border-radius: 6px;
+      opacity: 1;
+      padding: 10px 10px;
+      
+      & .liwLeft{
+        i{
+          font-size: 20px;
+        }
+      }
+      & .liwRt{
+        span{
+          font: normal normal normal 17px Source Sans Pro;
+          letter-spacing: 0px;
+          color: #110403;
+          opacity: 0.77;
+        }
+        h3{
+          font: normal normal normal 21px Source Sans Pro;
+          letter-spacing: 0px;
+          color: #110403;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+.modal-header{
+  border-bottom: none;
 }
