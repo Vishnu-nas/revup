@@ -10,8 +10,10 @@ function BookNow() {
 
   const handleDurationClose = () => setDuration(false);
   const handleDurationShow = () => setDuration(true);
+
   const handletimeDateClose = () => setTimeDate(false);
   const handletimeDateShow = () => setTimeDate(true);
+  
   const handleLocationClose = () => setLocation(false);
   const handleLocationShow = () => setLocation(true);
   return (
