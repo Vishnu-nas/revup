@@ -1128,6 +1128,7 @@ a.revupLogo.navbar-brand img {
           display: block;
         }
         & .elItem{
+          cursor: pointer;
           @include responsive(phone){
             margin-bottom: 25px;
           } 
