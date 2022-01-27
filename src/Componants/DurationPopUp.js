@@ -10,7 +10,7 @@ function DurationPopUp({show,handleClose}) {
         <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Cancel
+            Cancel 
           </Button>
           <Button variant="primary" onClick={handleClose}>
             Done
