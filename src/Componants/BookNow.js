@@ -1,18 +1,23 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Car2 from '../images/car2.png'
+import DurationPopUp from './DurationPopUp';
 function BookNow() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <div>
         <div className="bookNowSection">
             <div className="container">
                 <div className="wrapBookNow">
                     <div className="row bnRow">
-                        <div className="col-lg-5 col-sm-12">
+                        <div className="col-lg-5 col-sm-12 colPdLeft">
                             <div className="pdLeft">
                                 <img src={Car2} alt="" />
                             </div>
                         </div>
-                        <div className="col-lg-7 col-sm-12">
+                        <div className="col-lg-7 col-sm-12 colPdRight">
                             <div className="pdRight">
                                 <h2>Lamborghini Aventador</h2>
                                 <div class="review">
@@ -29,15 +34,15 @@ function BookNow() {
                     </div>
                     <div className="enquiryArea">
                         <div className="enqLeft">
-                            <div className="elItem">
+                            <div className="elItem durBtn" onClick={handleShow}>
                                 <span><i class="fas fa-stopwatch"></i> Duration</span>
                                 <h3>Set Duration <i class="fad fa-angle-right"></i></h3>
                             </div>
-                            <div className="elItem">
+                            <div className="elItem dtBtn">
                                 <span><i class="fas fa-clock"></i> Ride Date & Time</span>
                                 <h3>Choose Date & Time <i class="fad fa-angle-right"></i></h3>
                             </div>
-                            <div className="elItem">
+                            <div className="elItem locBtn">
                                 <span><i class="fad fa-map-marker-alt"></i> Set Pickup Location</span>
                                 <h3>Set Location <i class="fad fa-angle-right"></i></h3>
                             </div>
@@ -53,6 +58,9 @@ function BookNow() {
                 </div>
             </div>
         </div>
+        {
+            show && <DurationPopUp handleClose={handleClose} show={show} handleShow={handleShow}/>
+        }
     </div>
   );
 }

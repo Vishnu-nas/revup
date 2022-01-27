@@ -10,6 +10,7 @@ html{
 h1,h2,h3,h4,span,p{
   font-family: Source Sans Pro;
 }
+
 .pt60{
   padding-top: 60px;
 }
@@ -18,6 +19,12 @@ h1,h2,h3,h4,span,p{
 }
 #basic-navbar-nav{
   justify-content: flex-end;
+}
+p{
+  @include responsive(phone){
+    font: normal normal 300 16px/30px Source Sans Pro !important;
+    margin-bottom: 15px;
+  }  
 }
 .navBar{
   position: absolute !important;
@@ -617,6 +624,9 @@ a.revupLogo.navbar-brand img {
         opacity: 1;
         margin-bottom: 20px;
         display: inline-block;
+        @include responsive(phone){
+          font: normal normal 200 18px/0 Source Sans Pro;
+        }
       }
       & h2{
         font: normal normal 200 39px/40px Source Sans Pro;
@@ -865,9 +875,15 @@ a.revupLogo.navbar-brand img {
   }
    &.fif{
     padding-right: 200px;
+    @include responsive(phone){
+      padding-right: 0;
+    }
    }
    &.fis{
      padding-right: 100px;
+     @include responsive(phone){
+      padding-right: 0;
+    }
    }
    & h3{
     font: normal normal 200 27px/35px Source Sans Pro;
@@ -932,6 +948,10 @@ a.revupLogo.navbar-brand img {
     justify-content: space-between;
     align-items: center;
     padding: 25px 0 30px;
+    @include responsive(phone){
+      display: block;
+      text-align: center;
+    }
    & .cpL p{
     font: normal normal 300 16px/32px Source Sans Pro;
     letter-spacing: 0px;
@@ -963,6 +983,9 @@ a.revupLogo.navbar-brand img {
 .spBanner.bannerSec{
     height: auto;
     padding: 160px 0;
+    @include responsive(Exsmall){
+      padding: 100px 0;
+    }
     & .spRow{
       text-align: center;
       & h1{
@@ -970,6 +993,10 @@ a.revupLogo.navbar-brand img {
         letter-spacing: 0px;
         color: #F6491E;
         opacity: 1;
+        @include responsive(phone){
+          font: normal normal 300 40px Source Sans Pro;
+          margin-bottom: 15px;
+        }  
       }
       & p{
         text-align: center;
@@ -997,6 +1024,12 @@ a.revupLogo.navbar-brand img {
     @include border-radius(12px);
     overflow: hidden;
     & .bnRow{
+      > .colPdLeft{
+        padding: 0;
+      }
+      > .colPdRight{
+        padding: 0;
+      }
       align-items: center;
       border-radius: 12px;
       padding: 40px;      
@@ -1004,6 +1037,9 @@ a.revupLogo.navbar-brand img {
       @include border-radius(12px);
       & .pdLeft{
         padding: 0 30px;
+        @include responsive(phone){
+          padding-bottom: 30px;
+        }
         & img{
           max-width: 100%;
         }
@@ -1014,6 +1050,9 @@ a.revupLogo.navbar-brand img {
           letter-spacing: 0px;
           color: #110403;
           opacity: 1;
+          @include responsive(phone){
+            font: normal normal 300 28px Source Sans Pro;
+          }
         }
         & .review{
           & span{
@@ -1035,6 +1074,9 @@ a.revupLogo.navbar-brand img {
         }
         & .priceForCar{
           padding-top: 30px;
+          @include responsive(phone){
+            padding-top: 20px;
+          }
           & h2{
             font: normal normal 600 37px Segoe UI;
             letter-spacing: 0px;
@@ -1042,6 +1084,9 @@ a.revupLogo.navbar-brand img {
             text-transform: uppercase;
             opacity: 1;
             margin-bottom: 0;
+              @include responsive(phone){
+                font: normal normal 600 28px Segoe UI;
+              }
             & span{
               font: normal normal 300 20px Segoe UI;
               letter-spacing: 0px;
@@ -1068,6 +1113,10 @@ a.revupLogo.navbar-brand img {
       justify-content: space-between;
       align-content: center;
       padding: 20px 40px;
+      @include responsive(phone){
+        display: block;
+        padding: 30px 40px;
+      }
       & .enqLeft{
         display: flex;
         align-items: center;
@@ -1075,7 +1124,15 @@ a.revupLogo.navbar-brand img {
         flex: 1;        
         max-width: 70%;
         width: 100%;
+        @include responsive(phone){
+          display: block;
+        }
         & .elItem{
+          cursor: pointer;
+          @include responsive(phone){
+            margin-bottom: 25px;
+          } 
+          
           > span{
             & i{
               margin-right: 5px;
@@ -1086,6 +1143,9 @@ a.revupLogo.navbar-brand img {
             letter-spacing: 0px;
             color: #FFFFFF;
             opacity: 0.68;
+            @include responsive(Exsmall){
+              font: normal normal 600 16px Source Sans Pro;
+            }
           }
           & h3{
             margin-bottom: 0;
@@ -1096,6 +1156,9 @@ a.revupLogo.navbar-brand img {
             display: flex;
             align-items: center;
             margin-top: 4px;
+            @include responsive(Exsmall){
+              font: normal normal 600 22px Source Sans Pro;
+            }
             & i{
               opacity: 0.61;
               margin-left: 10px;
@@ -1113,6 +1176,10 @@ a.revupLogo.navbar-brand img {
           text-transform: uppercase;
           opacity: 1;
           border-radius: 4px;
+          @include responsive(phone){
+            padding: 10px 30px;
+            margin-top: 20px;
+          }
         }
       }
     }
@@ -1134,6 +1201,9 @@ a.revupLogo.navbar-brand img {
     & .colSpec{
       & .specItem{
         margin-bottom: 25px;
+        @include responsive(Exsmall){
+          margin-bottom: 10px;
+        }
         & .sitemHd{
           > span{
             font: normal normal 300 20px/28px Source Sans Pro;
@@ -1196,6 +1266,9 @@ a.revupLogo.navbar-brand img {
 
 .cusReview{
   padding: 60px 0;
+  @include responsive(phone){
+    padding: 40px 0;
+  }
   & h2{
     font: normal normal 200 39px/61px Source Sans Pro;
     letter-spacing: 0px;
@@ -1206,6 +1279,10 @@ a.revupLogo.navbar-brand img {
     & .colReview{
       padding-right: 100px;
       padding-top: 50px;
+      @include responsive(phone){
+        padding-top: 20px;
+        padding-right: 0;
+      }
       & .reviewHd{
         display: flex;
         align-items: center;
@@ -1251,6 +1328,124 @@ a.revupLogo.navbar-brand img {
           color: #110403;
           opacity: 0.91;
         }
+      }
+    }
+  }
+}
+
+// modal Duration
+.modalDuration{
+  & .modal-dialog{
+    max-width: 600px;
+  }
+  .modal-content{
+    & .modal-header{
+      & .modal-title{
+        font: normal normal 200 31px Source Sans Pro;
+        letter-spacing: 0px;
+        color: #110403;
+      }
+    }
+    & .modal-footer{
+      & .closeBtn{
+        background-color: #ffffff;
+        border-color: #6c757d;
+        font: normal normal 600 14px/26px Segoe UI;
+        letter-spacing: 0px;
+        color: #110403;
+        text-transform: uppercase;
+        opacity: 1;
+        min-width: 150px;
+      }
+      & .saveBtn{
+        background: #F6491E 0% 0% no-repeat padding-box;
+        border-radius: 4px;
+        border-color: #F6491E;
+        font: normal normal 600 14px/26px Segoe UI;
+        letter-spacing: 0px;
+        color: #110403;
+        text-transform: uppercase;
+        opacity: 1;
+        min-width: 150px;
+        color: #fff;
+      }
+    }
+  }
+}
+.chooseDuration{ 
+  & .radio {
+    &-input {
+      visibility: hidden;
+    }
+  
+    &-label {
+      position: relative;
+      padding-left: 35px;
+      &:after {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        left: 4px;
+        top: 4px;
+        border-radius: 50%;
+      }
+    }
+  
+    &-border {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      outline: solid 3px #d449e3;
+      border-radius: 50%;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+    }
+    &-input:checked + &-label:after {
+      transition: all 0.5s;
+      background-color: #64236b;
+    }
+  }
+  & form{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    & .form-check-inline{    
+      flex: 1 0 20%;
+      margin: 5px;  
+      padding: 10px 12px;
+      box-shadow: 0px 0px 48px #00000008;
+      border: 0.5px solid #F6491E;
+      border-radius: 6px;
+      position: relative;
+      cursor: pointer;
+      & input{
+        border: 1px solid #f7633e;
+        position: relative;
+        text-align: center;
+        padding: 8px;
+        margin-left: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        &:checked{
+          background-color: #F6491E;
+          border-color: #F6491E;
+        }
+      }
+      & label{
+        cursor: pointer;
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
   }
