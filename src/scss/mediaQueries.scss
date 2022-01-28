@@ -37,3 +37,42 @@
     -ms-border-radius:$radius;
     border-radius:$radius;
 }
+@mixin btn($fontcolor: #FAFAFA){
+    outline: 0;
+    border: 0;
+    width: 100%;
+    padding: 15px;
+    background: #FF5722;
+    color: $fontcolor;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: normal normal 600 19px/26px Segoe UI;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    opacity: 1;
+  }
+  
+  @mixin message(){
+    color: #90A4AE;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin-top: 30px;
+  }
+  
+  @mixin input(){
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    outline: 0;
+    font-size: 15px;
+    box-sizing: border-box;
+    background-color: #FCFCFC !important;
+    box-shadow: 0px 0px 2px #0000000a;
+    border: 1px solid #E1E1E1;
+    border-radius: 4px;
+  }
