@@ -870,7 +870,7 @@ a.revupLogo.navbar-brand img {
     }
   }
  & .fooIn{
-  @include responsive(phone){
+  @include responsive(tab-port){
     margin-bottom: 40px;
   }
    &.fif{
@@ -1796,6 +1796,13 @@ a.revupLogo.navbar-brand img {
       background-size: 100%;
       height: 100%;
       overflow: hidden;
+      @include responsive(tab-port){
+        border-radius: 10px 10px 0 0;
+        min-height: 480px;
+      }
+      @include responsive(Exsmall){
+        min-height: 370px;
+      }
       &::before{
         content: "";
         position: absolute;
@@ -1842,12 +1849,18 @@ a.revupLogo.navbar-brand img {
           color: #F6491E;
           opacity: 1;
           margin: 0;
+          @include responsive(phone){
+            font-size: 34px;
+          }
         }
         span{
           font: normal normal 300 24px/33px Source Sans Pro;
           letter-spacing: 0px;
           color: #110403;
           opacity: 1;
+          @include responsive(phone){
+            font-size: 18px;
+          }
         }
       }
       .forgetPass{
@@ -1863,6 +1876,9 @@ a.revupLogo.navbar-brand img {
         }
       }
       .register-form{
+        @include responsive(phone){
+          margin-top: 30px;
+        }
         .noCode{
           text-align: left;
           p{
@@ -1885,6 +1901,10 @@ a.revupLogo.navbar-brand img {
                 width:50px;
                 height:50px;
                 text-align:center;
+                @include responsive(phone){
+                  width: 40px;
+                  height: 40px;
+                }
               }
             }
             
@@ -1912,6 +1932,10 @@ a.revupLogo.navbar-brand img {
   
   .btn{
     @include btn;
+    @include responsive(phone){
+      padding: 10px;
+      font: normal normal 600 15px/20px Segoe UI;
+    }
   }
   
   .message {
@@ -1928,6 +1952,406 @@ a.revupLogo.navbar-brand img {
     a {
       text-decoration: none;
       color: #F6491E;
+    }
+  }
+}
+
+// confirm Booking
+
+.confirmBooking{
+  background: #F6F6F6 0% 0% no-repeat padding-box;
+  padding-bottom: 60px;
+  .cbRow{
+    margin: 0;
+    padding: 20px;
+    padding-top: 30px;
+    background-color: #fff;
+    margin-top: -60px;
+    position: relative;
+    box-shadow: 0px 0px 48px #00000008;
+    border-radius: 12px;
+  }
+  .cbLeft{
+    h2{
+      font: normal normal 200 39px  Source Sans Pro;
+      letter-spacing: 0px;
+      color: #110403;
+      opacity: 1;
+    }
+    .cbLcar{
+      height: 100%;
+      display: flex;
+      align-items: center;
+      img{
+        max-width: 100%;
+      }
+    }
+  }
+  .cbRight{
+    .cbRHd{
+      margin-bottom: 30px;
+      span{
+        font: normal normal normal 22px Source Sans Pro;
+        letter-spacing: 0px;
+        color: #110403;
+        opacity: 1;
+      }
+      h2{
+        font: normal normal 300 31px  Source Sans Pro;
+        letter-spacing: 0px;
+        color: #110403;
+        opacity: 1;
+      }
+    }
+    .bookingDetail{
+      padding-left: 0;
+      .bdItem{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        .bdLeft{
+          padding-right: 40px;  
+          width: 20%;
+          max-width: 20%; 
+          span{
+            font: normal normal 300 17px Source Sans Pro;
+            letter-spacing: 0px;
+            color: #110403;
+            opacity: 0.68;
+          }      
+        }
+        .bdRight{
+          display: flex;
+          align-items: center;
+          .bdRicon{
+            i{
+              color: #F6491E;
+              width: 15px;
+              height: 15px;
+            }
+            .dot{
+              background-color: #F6491E;
+              width: 15px;
+              height: 15px;
+              border-radius: 50%;
+              display: block;
+              position: relative;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              &.withWhite{
+                &::before{
+                  background-color: #fff;
+                  width: calc(100% - 6px);
+                  height: calc(100% - 6px);
+                  content: "";
+                  position: absolute;
+                  border-radius: 50%;
+                }
+              }
+            }
+          }
+          .optedItem{
+            padding-left: 20px;
+            h3{
+              font: normal normal 600 28px  Source Sans Pro;
+              letter-spacing: 0px;
+              color: #000000;
+              opacity: 1;
+            }
+            span{
+              font: normal normal 300 20px  Source Sans Pro;
+              letter-spacing: 0px;
+              color: #110403;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+    .totalHrs{
+      h3{
+        font: normal normal normal 22px Source Sans Pro;
+        letter-spacing: 0px;
+        color: #F6491E;
+        opacity: 1;
+      }
+      p{
+        font: normal normal normal 15px Source Sans Pro;
+        letter-spacing: 0px;
+        color: #110403;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.calcRow{
+  margin: 0;
+  margin-top: 20px !important;
+  .pickLocation{
+    position: relative;
+    min-height: 430px;
+    background: url(./images/bg-pattern.png) 0 -15px,linear-gradient(178deg, #F77902 0%, #F64B02 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 48px #00000012;
+    border-radius: 12px;
+    opacity: 1;
+    background-size: 130%;
+    height: 100%;
+    overflow: hidden;
+    padding: 30px;
+    padding-top: 15px;
+    .plSpan{
+      font: normal normal normal 23px/50px Source Sans Pro;
+      letter-spacing: 0px;
+      color: #FFFFFF;
+      opacity: 1;
+      i{
+        color: #FFFFFF;
+      }
+    }
+    .locName{
+      margin-top: 10px;
+      span{
+        font: normal normal 600 22px  Source Sans Pro;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        opacity: 0.65;
+      }
+      h2{
+        font: normal normal 300 36px Source Sans Pro;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        opacity: 1;
+      }
+    }
+  }
+  .calcPart{
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0px 0px 48px #00000008;
+    border-radius: 12px;
+    opacity: 1;
+    span{
+      font: normal normal normal 18px Source Sans Pro;
+      letter-spacing: 0px;
+      color: #110403;
+      opacity: 0.74;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .promoInput{
+      display: flex;
+      justify-content: space-between;
+      input{
+        flex-grow: 1;
+        background: #FCFCFC 0% 0% no-repeat padding-box;
+        box-shadow: 0px 0px 2px #0000000A;
+        border: 1px solid #E1E1E1;
+        border-radius: 2px 0px 0px 2px;
+        opacity: 1;
+        padding-left: 15px;
+        outline: 0;
+      }
+      button{
+        background: #F6491E 0% 0% no-repeat padding-box;
+        box-shadow: 0px 0px 2px #0000000a;
+        border: 1px solid #F6491E;
+        border-radius: 0px 2px 2px 0px;
+        opacity: 1;
+        color: #FFFFFF;
+        font-size: 14px;
+        padding: 10px 30px;
+      }
+    }
+    .orderSum{
+      padding-top: 15px;
+      h2{
+        font: normal normal normal 28px/61px Source Sans Pro;
+        letter-spacing: 0px;
+        color: #110403;
+        opacity: 1;
+      }
+      .orders{
+        .orderin{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          &.totalPrice{
+            .ordItemName span,.itemPrice span{
+            font: normal normal 600 20px/34px Source Sans Pro;
+            letter-spacing: 0px;
+            color: #110403;
+            opacity: 1;
+           }
+          }
+          .ordItemName{
+            span{
+              font: normal normal 300 20px/34px Source Sans Pro;
+              letter-spacing: 0px;
+              color: #110403;
+              opacity: 1;
+            }
+          }
+          .itemPrice{
+            &.actualPrice{
+              span{
+                font: normal normal 600 20px/34px Source Sans Pro;
+                letter-spacing: 0px;
+                color: #110403;
+                opacity: 1;
+              }
+            }
+            span{
+              font: normal normal 300 20px/34px Source Sans Pro;
+              letter-spacing: 0px;
+              color: #110403;
+              opacity: 1;
+            }
+          }
+        }
+      }
+      .proceedBtn{
+        padding-top: 20px;
+        border-top: 1px solid #0000000A;
+        margin-top: 15px;
+        button{
+          @include btn;
+          border-radius: 4px;
+          width: auto;
+          padding: 10px 30px;
+          margin: auto;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+// tab
+.pmRow{
+    padding: 30px;
+    padding-top: 15px;
+    position: relative;
+    margin-top: -60px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 48px #00000008;
+    border-radius: 12px;
+    opacity: 1;
+  h2{
+    font: normal normal normal 28px Source Sans Pro;
+    letter-spacing: 0px;
+    color: #110403;
+    opacity: 1;
+    margin-bottom: 30px;
+  }
+  .nav-tabs{
+    border: none;
+    display: flex;
+    gap: 10px;
+    
+    .nav-item{
+      .nav-link{
+        border: none;
+        position: relative;
+        cursor: pointer;
+        font: normal normal 300 28px Source Sans Pro;
+        letter-spacing: 0px;
+        color: #110403;
+        opacity: 0.41;
+        padding: 8px 15px;
+        &.active{
+          position: relative;
+          opacity: 1;
+          color: #F6491E;
+          &::before{
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: #F6491E;
+            content: "";
+            left: 0;
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  .tab-content{
+    .tab-pane{
+      .paneWrap{
+        margin-top: 50px;
+      }
+      &.active{
+
+      }
+      .pmLeft{
+        label{
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          padding: 10px;
+          background: #FFFFFF 0% 0% no-repeat padding-box;
+          border: 0.5px solid #ffffff;
+          &.active{
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            box-shadow: 0px 0px 48px #00000008;
+            border: 0.5px solid #F6491E;
+            border-radius: 12px;
+            opacity: 1;
+          }
+          input{
+            accent-color: #F6491E;
+            &:checked{
+              background-color: #F6491E;
+              border-color: #F6491E;
+            }
+          }
+          .ptBank{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            flex: 1;
+            padding-left: 20px;
+            .bankNm{
+              h3{
+                margin-bottom: 0;
+                font: normal normal 600 20px/31px Source Sans Pro;
+                letter-spacing: 0px;
+                color: #110403;
+              }
+              span{
+                font: normal normal 300 18px Source Sans Pro;
+                letter-spacing: 0px;
+                color: #110403;
+                opacity: 1;
+              }
+            }
+            .nameOnCard{
+
+            }
+            .expires{
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.orderSy{
+  .calcRow{
+    margin: 0;
+  }
+  .calcPart{
+    box-shadow:none;
+    .orderSum{
+      padding-top: 0;
+      h2{
+        font: normal normal normal 28px Source Sans Pro;
+      }
     }
   }
 }

@@ -11,6 +11,8 @@ import Login from './Pages/Login';
 import CreateAccount from './Pages/CreateAccount';
 import VerifyAccount from './Pages/VerifyAccount';
 import UserInfo from './Pages/UserInfo';
+import ConfirmBooking from './Pages/ConfirmBooking';
+import AddPayment from './Pages/AddPayment';
 function App() {
   return (
     <div className="App">
@@ -27,6 +29,10 @@ function App() {
           <Route path="/verify-account" element={<VerifyAccount />}>
           </Route>
           <Route path="/user-info" element={<UserInfo />}>
+          </Route>
+          <Route path="/confirm-booking" element={<ConfirmBooking />}>
+          </Route>
+          <Route path="/add-payment" element={<AddPayment />}>
           </Route>
         </Routes>
       </BrowserRouter>

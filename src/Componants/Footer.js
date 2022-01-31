@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Footer() {
+function Footer(props) {
   return (
         <div>
-            <div className="footer pt80">
+            <div className={"footer pt80 " + (props.noTopSpace ? "m-0" : "")}>
                 <div className="container">
                     <div className="row footerRow">
                         <div className="col-lg-6 p-0">

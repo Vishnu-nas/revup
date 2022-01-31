@@ -6,7 +6,7 @@ function VerifyAccountView() {
     const handleChange = (element,index) =>{
         //console.log("element",element);
         if(isNaN(element.value)) return false;
-        setOTP([...OTP.map((d,idx)=> (idx===index)? element.value : d)]);
+        setOTP([...OTP.map((d,idx) => (idx === index) ? element.value : d)]);
         //console.log("element",element.nextSibiling);
         if(element.nextSibling){
             element.nextSibling.focus();
