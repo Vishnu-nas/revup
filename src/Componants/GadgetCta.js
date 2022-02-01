@@ -5,7 +5,7 @@ import shirt from '../images/shirt.png'
 function GadgetCta() {
   return (
     <div className="shopCta">
-        <div className="container">
+        <div className="container p-0">
             <div className="row shopCtaRow" style={{ backgroundImage: `url('${ctaBg}')` }}>
                 <div className="col-lg-6 h100 colSctaLeft">
                     <div className="shpGadL">

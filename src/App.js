@@ -13,6 +13,7 @@ import VerifyAccount from './Pages/VerifyAccount';
 import UserInfo from './Pages/UserInfo';
 import ConfirmBooking from './Pages/ConfirmBooking';
 import AddPayment from './Pages/AddPayment';
+import ThankYou from './Pages/ThankYou';
 function App() {
   return (
     <div className="App">
@@ -33,6 +34,8 @@ function App() {
           <Route path="/confirm-booking" element={<ConfirmBooking />}>
           </Route>
           <Route path="/add-payment" element={<AddPayment />}>
+          </Route>
+          <Route path="/thank-you" element={<ThankYou />}>
           </Route>
         </Routes>
       </BrowserRouter>

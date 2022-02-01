@@ -594,7 +594,7 @@ a.revupLogo.navbar-brand img {
     position: relative;
     background-position: left center;
     height: 250px;
-    @include responsive(phone){
+    @include responsive(tab-port){
       height: auto;
       margin-bottom: 0;
     }
@@ -660,7 +660,7 @@ a.revupLogo.navbar-brand img {
       position: absolute;
       height: calc(100% + 50px);
       top: -30px;
-      @include responsive(phone){
+      @include responsive(tab-port){
         height: auto;
         top: 0;
         width: 70%;
@@ -1963,11 +1963,28 @@ a.revupLogo.navbar-brand img {
   padding-bottom: 60px;
   &.confirmTab{
     padding-bottom: 0;
+    background: #fff 0% 0% no-repeat padding-box;
     .cbRow{
       margin-top: 5px;
       position: relative;
       box-shadow: none;
       border-radius: 0;
+      @include responsive(phone){
+        padding: 0;
+      }
+      .colLcb,.colRcb{
+        @include responsive(phone){
+          padding: 0;
+        }
+      }
+    }
+    .payCalcRow{
+      .calcPayment{
+        .calcPart{
+          padding: 0;
+        }
+      }
+      
     }
   }
   .cbRow{
@@ -1986,6 +2003,9 @@ a.revupLogo.navbar-brand img {
       letter-spacing: 0px;
       color: #110403;
       opacity: 1;
+      @include responsive(phone){
+        font: normal normal 200 32px Source Sans Pro;
+      }
     }
     .cbLcar{
       height: 100%;
@@ -1993,23 +2013,33 @@ a.revupLogo.navbar-brand img {
       align-items: center;
       img{
         max-width: 100%;
+        margin-top: 20px;
       }
     }
   }
   .cbRight{
     .cbRHd{
       margin-bottom: 30px;
+      @include responsive(phone){
+        margin-top: 20px;
+      }
       span{
         font: normal normal normal 22px Source Sans Pro;
         letter-spacing: 0px;
         color: #110403;
         opacity: 1;
+        @include responsive(phone){
+          font: normal normal normal 18px Source Sans Pro;
+        }
       }
       h2{
         font: normal normal 300 31px  Source Sans Pro;
         letter-spacing: 0px;
         color: #110403;
         opacity: 1;
+        @include responsive(phone){
+          font: normal normal 300 30px Source Sans Pro;
+        }
       }
     }
     .bookingDetail{
@@ -2019,10 +2049,17 @@ a.revupLogo.navbar-brand img {
         display: flex;
         align-items: center;
         margin-bottom: 20px;
+        @include responsive(phone){
+          display: block;
+        }
         .bdLeft{
           padding-right: 40px;  
           width: 20%;
           max-width: 20%; 
+          @include responsive(phone){
+            width: 100%;
+            max-width: 100%;
+          }
           span{
             font: normal normal 300 17px Source Sans Pro;
             letter-spacing: 0px;
@@ -2033,6 +2070,9 @@ a.revupLogo.navbar-brand img {
         .bdRight{
           display: flex;
           align-items: center;
+          @include responsive(phone){
+            margin-top: 8px;
+          }
           .bdRicon{
             i{
               color: #F6491E;
@@ -2063,17 +2103,26 @@ a.revupLogo.navbar-brand img {
           }
           .optedItem{
             padding-left: 20px;
+            @include responsive(phone){
+              padding-left: 10px;
+            }
             h3{
               font: normal normal 600 28px  Source Sans Pro;
               letter-spacing: 0px;
               color: #000000;
               opacity: 1;
+              @include responsive(phone){
+                font: normal normal 600 20px Source Sans Pro;
+              }
             }
             span{
               font: normal normal 300 20px  Source Sans Pro;
               letter-spacing: 0px;
               color: #110403;
               opacity: 1;
+              @include responsive(phone){
+                font: normal normal 300 16px Source Sans Pro;
+              }
             }
           }
         }
@@ -2142,6 +2191,9 @@ a.revupLogo.navbar-brand img {
     box-shadow: 0px 0px 48px #00000008;
     border-radius: 12px;
     opacity: 1;
+    @include responsive(tab-port){
+      margin-top: 20px;
+    }
     span{
       font: normal normal normal 18px Source Sans Pro;
       letter-spacing: 0px;
@@ -2176,6 +2228,10 @@ a.revupLogo.navbar-brand img {
     }
     .orderSum{
       padding-top: 15px;
+      @include responsive(phone){
+        padding-top: 15px;
+        margin-bottom: 15px;
+      }
       h2{
         font: normal normal normal 28px/61px Source Sans Pro;
         letter-spacing: 0px;
@@ -2275,6 +2331,9 @@ a.revupLogo.navbar-brand img {
         color: #110403;
         opacity: 0.41;
         padding: 8px 15px;
+        @include responsive(phone){
+          font: normal normal 300 18px Source Sans Pro;
+        }
         &.active{
           position: relative;
           opacity: 1;
@@ -2351,12 +2410,18 @@ a.revupLogo.navbar-brand img {
                 font: normal normal 600 20px/31px Source Sans Pro;
                 letter-spacing: 0px;
                 color: #110403;
+                @include responsive(phone){
+                  font: normal normal 600 18px Source Sans Pro;
+                }
               }
               span{
                 font: normal normal 300 18px Source Sans Pro;
                 letter-spacing: 0px;
                 color: #110403;
                 opacity: 1;
+                @include responsive(phone){
+                  font: normal normal 300 16px Source Sans Pro;
+                }
               }
             }
             .nameOnCard{
@@ -2377,10 +2442,22 @@ a.revupLogo.navbar-brand img {
   }
   .calcPart{
     box-shadow:none;
+    @include responsive(phone){
+      padding: 0;
+    }
+    @include responsive(tab-port){
+      margin-top: 20px;
+    }
     .orderSum{
       padding-top: 0;
+      @include responsive(phone){
+        padding-top: 15px;
+      }
       h2{
         font: normal normal normal 28px Source Sans Pro;
+        @include responsive(phone){
+          margin-bottom: 15px;
+        }
       }
     }
   }
@@ -2406,15 +2483,138 @@ a.revupLogo.navbar-brand img {
     }
   }
 }
-.procPaybtn{
-  display: flex;
-  align-items: center;
-  justify-content: end;
+.paymentRow{
+  background-color: #FFFFFF;
+  .procPaybtn{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-top: 25px;
+    margin-top: 15px;
+    border-top: 1px solid #e0e0e0;
+    .payBtn{
+      @include btn;
+      width: auto;
+      border-radius: 4px;
+    }
+  } 
+} 
+.calcPayment{
+  margin-top: 0 !important;
+  .calcPart{
+    box-shadow: none;
+    @include responsive(tab-port){
+      margin-top: 20px;
+    }
+    .orderSum{
+      padding-top: 0;
+      @include responsive(phone){
+        padding-top: 15px;
+      }
+      h2{
+        font: normal normal normal 28px Source Sans Pro;
+        margin-bottom: 20px;
+        @include responsive(phone){
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+.payCalcRow{
+  border-top: 1px solid #e4e4e4;
   padding-top: 25px;
-  margin-top: 15px;
-  border-top: 1px solid #e0e0e0;
-  .payBtn{
+  background-color: #FFFFFF;
+  .colPayLeft{
+    padding-right: 70px;
+    h2{
+      margin-bottom: 0;
+    }
+    .payLin{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      box-shadow: 0px 0px 48px #00000008;
+      border: 0.5px solid #BBBBBB;
+      border-radius: 12px;
+      opacity: 1;
+      margin-top: 20px;
+      @include responsive(phone){
+        padding: 15px;
+      }
+      .pllleft{
+        span{
+          font: normal normal 300 23px  Source Sans Pro;
+          letter-spacing: 0px;
+          color: #F6491E;
+          opacity: 1;
+          @include responsive(phone){
+            font: normal normal 300 18px Source Sans Pro;
+          }
+        }
+      }
+      .pllrt{
+        text-align: right;
+        img{
+          width: 40px;
+        }
+        .accNo h2{
+          font: normal normal normal 31px Source Sans Pro;
+          letter-spacing: 0px;
+          color: #110403;
+          opacity: 1;
+          margin-top: 10px;
+          @include responsive(Exsmall){
+            font: normal normal normal 16px Source Sans Pro;
+          }
+        }
+      }
+    }
+  }
+}
+.payMethods{
+  background: #F6F6F6 0% 0% no-repeat padding-box;
+  padding-bottom: 60px;
+}
+.thankYouDec{
+  text-align: center;
+  h2{
+    font: normal normal 300 41px Source Sans Pro;
+    letter-spacing: 0px;
+    color: #F6491E;
+    opacity: 1;
+    margin-bottom: 10px;
+  }
+  p{
+    text-align: center;
+    letter-spacing: 0px;
+    color: #110403;
+    opacity: 1;
+    font-size: 24px;
+    span{
+      font-weight: 700;
+      display: block;
+    }
+  }
+  .bookDetail{
+    display: flex;
+    justify-content: center;
+  }
+  .bookDtlbtn{
     @include btn;
     width: auto;
+    padding: 15px 30px;
+    margin-top: 15px;
+    border-radius: 4px;
   }
-}  
+}
+.confirmBooking .cbRow.thankRow{
+  justify-content: center;
+  margin-bottom: 60px;
+  align-items: center;
+  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}

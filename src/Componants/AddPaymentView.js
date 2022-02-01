@@ -18,7 +18,7 @@ function AddPaymentView() {
             </div>
         </div>
         <Tabs />
-        <Footer />
+        <Footer noTopSpace/>
     </div>
   );
 }

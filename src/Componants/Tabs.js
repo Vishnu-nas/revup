@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Cards from '../images/cards.png'
 import BlueCar from '../images/car-blue.png';
+import MasterCard from '../images/master.png';
 function Tabs() {
  const [toggle,setToggle] = useState(1);
  const [extraClass, setExtraClass] = useState(1);
@@ -169,14 +170,14 @@ function Tabs() {
                         <div class={"tab-pane " + ( toggle === 2 ? "active" : "")}  id="tabs-2" role="tabpanel">
                             <div className="confirmBooking confirmTab">
                                 <div className="row cbRow">
-                                    <div className="col-lg-6">
+                                    <div className="col-lg-6 colLcb">
                                         <div className="cbLeft h100">
                                             <div className="cbLcar h100">
                                                 <img src={BlueCar} alt="" />
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="col-lg-6">
+                                    <div className="col-lg-6 colRcb">
                                         <div className="cbRight">
                                             <div className="cbRHd">
                                                 <span>TEXAS 202 HSZ</span>
@@ -235,11 +236,80 @@ function Tabs() {
                                             </div>
                                         </div>
                                     </div>
+                                </div>                                
+                                <div className="row payCalcRow">
+                                    <div className="col-lg-6 colPayLeft">
+                                        <h2>Payment Method</h2>
+                                        <div className="payLin">
+                                            <div className="pllleft">
+                                                <span>Credit Card</span>
+                                            </div>
+                                            <div className="pllrt">
+                                                <div className="cardIcon">
+                                                    <img src={MasterCard} alt="" />
+                                                </div>
+                                                <div className="accNo">
+                                                    <h2>XXXX XXXX X9565</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-6">
+                                        <div className="calcRow calcPayment">
+                                        <div className="calcPart">
+                                            <div className="orderSum">
+                                                <h2>Payment</h2>
+                                                <div className="orders">
+                                                    <div className="orderin">
+                                                        <div className="ordItemName">
+                                                            <span>Ride Cost ($350/Hour)</span>
+                                                        </div>
+                                                        <div className="itemPrice actualPrice">
+                                                            <span>$1750.00</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="orderin">
+                                                        <div className="ordItemName">
+                                                            <span>Ride Cost ($350/Hour)</span>
+                                                        </div>
+                                                        <div className="itemPrice">
+                                                            <span>$31.00</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="orderin">
+                                                        <div className="ordItemName">
+                                                            <span>Ride Cost ($350/Hour)</span>
+                                                        </div>
+                                                        <div className="itemPrice">
+                                                            <span>-$100.00</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="orderin totalPrice">
+                                                        <div className="ordItemName">
+                                                            <span>TOTAL</span>
+                                                        </div>
+                                                        <div className="itemPrice">
+                                                            <span>$1681.00</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                                <div class="paymentRow">
+                                    <div class="procPaybtn">
+                                        <button class="payBtn">Proceed to payment</button>
+                                    </div>
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
