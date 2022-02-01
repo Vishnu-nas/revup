@@ -76,3 +76,20 @@
     border: 1px solid #E1E1E1;
     border-radius: 4px;
   }
+  @mixin acBtn(){
+    border: 1px solid #F6491E;
+    border-radius: 4px;
+    opacity: 1;
+    background-color: #fff;
+    font: normal normal 600 16px Segoe UI;
+    color: #F6491E;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    & span{
+        font-size: 25px;
+        display: flex;
+        margin-right: 10px;
+    }
+  }

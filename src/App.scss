@@ -1961,6 +1961,15 @@ a.revupLogo.navbar-brand img {
 .confirmBooking{
   background: #F6F6F6 0% 0% no-repeat padding-box;
   padding-bottom: 60px;
+  &.confirmTab{
+    padding-bottom: 0;
+    .cbRow{
+      margin-top: 5px;
+      position: relative;
+      box-shadow: none;
+      border-radius: 0;
+    }
+  }
   .cbRow{
     margin: 0;
     padding: 20px;
@@ -2185,6 +2194,11 @@ a.revupLogo.navbar-brand img {
             color: #110403;
             opacity: 1;
            }
+           &.clrOrange{
+             span{
+              color: #F6491E;
+             }
+           }
           }
           .ordItemName{
             span{
@@ -2273,6 +2287,7 @@ a.revupLogo.navbar-brand img {
             content: "";
             left: 0;
             bottom: 0;
+            z-index: 9;
           }
         }
       }
@@ -2287,6 +2302,7 @@ a.revupLogo.navbar-brand img {
 
       }
       .pmLeft{
+        padding-right: 30px;
         label{
           display: flex;
           align-items: center;
@@ -2294,6 +2310,16 @@ a.revupLogo.navbar-brand img {
           padding: 10px;
           background: #FFFFFF 0% 0% no-repeat padding-box;
           border: 0.5px solid #ffffff;
+          &.bkCredHd{
+            border-bottom: 1px solid #c8c7c7;
+            margin-bottom: 20px;
+            padding-bottom: 5px !important;
+            span{
+              font: normal normal 300 18px Source Sans Pro;
+              letter-spacing: 0px;
+              color: #110403;
+            }
+          }
           &.active{
             background: #FFFFFF 0% 0% no-repeat padding-box;
             box-shadow: 0px 0px 48px #00000008;
@@ -2316,6 +2342,10 @@ a.revupLogo.navbar-brand img {
             flex: 1;
             padding-left: 20px;
             .bankNm{
+              flex-basis: calc(40%);
+              &.nmbk{
+                flex-basis: calc(40% + 40px);
+              }
               h3{
                 margin-bottom: 0;
                 font: normal normal 600 20px/31px Source Sans Pro;
@@ -2355,3 +2385,36 @@ a.revupLogo.navbar-brand img {
     }
   }
 }
+.addCardBtn{
+  margin-top: 30px;
+  .acBtn{
+    @include acBtn;
+  }
+}
+.cardAccept{
+  margin-top: 40px;
+  p{
+    margin-bottom: 0;
+    font: normal normal 200 18px Source Sans Pro;
+    letter-spacing: 0px;
+    color: #110403;
+    opacity: 1;
+  }
+  .cards{
+    img{
+      max-width: 100%;
+    }
+  }
+}
+.procPaybtn{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-top: 25px;
+  margin-top: 15px;
+  border-top: 1px solid #e0e0e0;
+  .payBtn{
+    @include btn;
+    width: auto;
+  }
+}  

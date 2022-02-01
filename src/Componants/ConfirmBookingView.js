@@ -1,13 +1,9 @@
 import React from 'react';
-import NavBar from './NavBar';
-import SingleProductBanner from './SingleProductBanner';
 import BlueCar from '../images/car-blue.png';
-import Footer from './Footer';
 function ConfirmBookingView() {
   return (
     <div>
-        <NavBar />
-        <SingleProductBanner />
+        
         <div className="confirmBooking">
             <div className="container">
                 <div className="row cbRow">
@@ -143,7 +139,7 @@ function ConfirmBookingView() {
                 </div>
             </div>
         </div>
-        <Footer noTopSpace/>
+        
     </div>
   );
 }
