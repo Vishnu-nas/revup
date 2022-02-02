@@ -2618,3 +2618,299 @@ a.revupLogo.navbar-brand img {
   padding-top: 20px;
   padding-bottom: 30px;
 }
+
+// Shop
+
+.shopRow{
+    margin-top: -60px;
+    position: relative;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 48px #00000008;
+    border-radius: 12px;
+    opacity: 1;
+  .shopHd{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #F6491E 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 48px #00000026;
+    border-radius: 12px 12px 0px 0px;
+    padding: 30px;
+    opacity: 1;    
+    @include responsive(phone){
+      flex-direction: column;
+    }
+    .shopHdLeft{
+      h2{
+        font: normal normal 200 39px/61px Source Sans Pro;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        opacity: 1;
+        margin-bottom: 0;
+        @include responsive(phone){
+          font-size: 34px;
+        }
+      }
+      @include responsive(phone){
+        margin-bottom: 20px;
+      }
+    }
+    .shopHdRt{
+      gap: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include responsive(phone){
+        gap: 60px;
+      }
+      .shopRtItem{
+        span{
+          font: normal normal 300 20px Source Sans Pro;
+          letter-spacing: 0px;
+          color: #FFFFFF;
+          opacity: 0.68;
+          display: flex;
+          align-items: center;
+          margin-left: 4px;
+          @include responsive(phone){
+            font: normal normal 300 16px Source Sans Pro;
+          }
+          i{
+            margin-right: 6px;
+          }
+        }
+        .customs_selects{
+          background: #F6491E 0% 0% no-repeat padding-box;
+          .customs_sel_box{
+            font: normal normal 600 24px Source Sans Pro;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+            opacity: 1;
+            background: #F6491E 0% 0% no-repeat padding-box;
+            border: none;
+            margin-top: 5px;
+            outline: 0;
+            @include responsive(phone){
+              font: normal normal 600 18px Source Sans Pro;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.shopList {
+  margin: 0;
+}
+.productItem{
+  padding: 30px;
+  margin-top: 20px;
+  .prodThumb{
+    height: 150px;
+    text-align: center;
+    img{
+      max-width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .prodDetail{
+    margin-top: 20px;
+    .review{
+      i{
+        color: #FFD816;
+      }
+    }
+    .prodName{
+      font: normal normal 300 17px  Source Sans Pro;
+      letter-spacing: 0px;
+      color: #110403;
+      opacity: 1;
+    }
+    .prodPrice{
+      font: normal normal normal 30px Source Sans Pro;
+      letter-spacing: 0px;
+      color: #F6491E;
+      opacity: 1;
+    }
+  }
+}
+.shopWrapper{
+  background: #F6F6F6 0% 0% no-repeat padding-box;
+  padding-bottom: 60px;
+}
+.page{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 40px 40px;
+  gap:10px;
+  &-item{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    &.active{
+      border: 1px solid #F6491E;
+      border-radius: 50%;
+      background-color: #F6491E;
+      color: #FFFFFF;
+    }
+  }
+}
+.itemProd{
+  margin-bottom: 20px;
+  .productBig{
+    height: 300px;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+}
+.navThumb{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+.shopDetailWrapper {
+  .shopDetailRow {
+    padding: 30px;
+    align-items: center;
+    position: relative;
+    margin: 0;
+    margin-top: -60px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 48px #00000008;
+    border-radius: 12px;
+    opacity: 1;
+  }
+}
+.psdin{
+  margin-top: 20px;
+}
+.psdRow{
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  span{
+    &:first-child{
+      font: normal normal 300 20px Source Sans Pro;
+      letter-spacing: 0px;
+      color: #110403;
+      opacity: 0.91;
+      flex: 0 0 40%;
+    }
+    &:last-child{
+      flex: 0 0 50%;
+      font-weight: 600;
+    }
+  }
+}
+.sppageBtns{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+.addTocartBtn{
+  padding: 10px 25px;
+  color: #fff;
+  background: #110403 0% 0% no-repeat padding-box;
+  border-radius: 4px;
+  opacity: 1;
+  font: normal normal 600 16px Segoe UI;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  opacity: 1;
+  border: none;
+  width: 170px;
+}
+.buyNowBtn{
+  padding: 10px 25px;
+  color: #fff;
+  background: #F6491E 0% 0% no-repeat padding-box;
+  border-radius: 4px;
+  opacity: 1;
+  font: normal normal 600 16px Segoe UI;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  opacity: 1;
+  border: none;
+  width: 170px;
+}
+}
+.prodDetailDec{
+  padding-left: 60px;
+  span{
+    font: normal normal 300 17px  Source Sans Pro;
+    letter-spacing: 0px;
+    color: #110403;
+    opacity: 1;
+  }
+  h1{
+    font: normal normal 300 31px Source Sans Pro;
+    letter-spacing: 0px;
+    color: #110403;
+    opacity: 1;
+    margin-bottom: 0;
+  }
+  .price{
+    margin-top: 15px;
+    h2{
+      font: normal normal 600 37px Segoe UI;
+      letter-spacing: 0px;
+      color: #110403;
+      text-transform: uppercase;
+      opacity: 1;
+    }
+  }
+  .prodSingleDesc{
+    margin: 30px 0;
+    h3{
+      font: normal normal normal 22px Source Sans Pro;
+      letter-spacing: 0px;
+      color: #110403;
+      opacity: 1;
+    }
+  }
+}
+.review{
+  span{
+    font: normal normal normal 18px Source Sans Pro;
+    i{
+      color: #FFD816;
+    }
+    .r-count{
+      color: #F6491E;
+      display: inline-block;
+      padding-left: 10px;
+    }
+  }
+}
+.shopDetailPage{
+  background: #F6F6F6 0% 0% no-repeat padding-box;
+  opacity: 1;
+  padding-bottom: 60px;
+}
+.wrapForReview{
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 48px #00000008;
+  border-radius: 12px;
+  opacity: 1;
+  margin-top: 20px;
+  .cusReview{
+    padding: 30px;
+  }
+}

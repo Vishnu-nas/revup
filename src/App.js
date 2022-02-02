@@ -14,6 +14,8 @@ import UserInfo from './Pages/UserInfo';
 import ConfirmBooking from './Pages/ConfirmBooking';
 import AddPayment from './Pages/AddPayment';
 import ThankYou from './Pages/ThankYou';
+import Shop from './Pages/Shop';
+import ShopDetail from './Pages/ShopDetail';
 function App() {
   return (
     <div className="App">
@@ -36,6 +38,10 @@ function App() {
           <Route path="/add-payment" element={<AddPayment />}>
           </Route>
           <Route path="/thank-you" element={<ThankYou />}>
+          </Route>
+          <Route path="/shop" element={<Shop />}>
+          </Route>
+          <Route path="/shop-detail" element={<ShopDetail />}>
           </Route>
         </Routes>
       </BrowserRouter>
