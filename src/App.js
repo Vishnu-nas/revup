@@ -16,6 +16,7 @@ import AddPayment from './Pages/AddPayment';
 import ThankYou from './Pages/ThankYou';
 import Shop from './Pages/Shop';
 import ShopDetail from './Pages/ShopDetail';
+import ConfirmBookingProduct from './Pages/ConfirmBookingProduct';
 function App() {
   return (
     <div className="App">
@@ -39,10 +40,18 @@ function App() {
           </Route>
           <Route path="/thank-you" element={<ThankYou />}>
           </Route>
+
+
+          {/* Shop products */}
+
           <Route path="/shop" element={<Shop />}>
           </Route>
           <Route path="/shop-detail" element={<ShopDetail />}>
           </Route>
+          <Route path="/product-confirm-booking" element={<ConfirmBookingProduct/>}>
+          </Route>
+
+          {/* end */}
         </Routes>
       </BrowserRouter>
     </div>
