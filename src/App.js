@@ -17,6 +17,9 @@ import ThankYou from './Pages/ThankYou';
 import Shop from './Pages/Shop';
 import ShopDetail from './Pages/ShopDetail';
 import ConfirmBookingProduct from './Pages/ConfirmBookingProduct';
+import Orders from './Pages/Orders';
+import OrderDetail from './Pages/OrderDetail';
+import OrderOnWay from './Pages/OrderOnWay';
 function App() {
   return (
     <div className="App">
@@ -50,7 +53,12 @@ function App() {
           </Route>
           <Route path="/product-confirm-booking" element={<ConfirmBookingProduct/>}>
           </Route>
-
+          <Route path="/orders" element={<Orders />}>
+          </Route>
+          <Route path="/order-detail" element={<OrderDetail />}>
+          </Route>
+          <Route path="/order-onway" element={<OrderOnWay />}>
+          </Route>
           {/* end */}
         </Routes>
       </BrowserRouter>
