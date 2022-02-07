@@ -39,10 +39,10 @@
 }
 @mixin btn($fontcolor: #FAFAFA){
     outline: 0;
-    border: 0;
+    border: 0 !important;
     width: 100%;
     padding: 15px;
-    background: #FF5722;
+    background-color: #FF5722 !important;
     color: $fontcolor;
     text-transform: uppercase;
     display: flex;

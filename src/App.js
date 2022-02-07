@@ -20,6 +20,11 @@ import ConfirmBookingProduct from './Pages/ConfirmBookingProduct';
 import Orders from './Pages/Orders';
 import OrderDetail from './Pages/OrderDetail';
 import OrderOnWay from './Pages/OrderOnWay';
+import OrderCancel from './Pages/OrderCancel';
+import OrderDelivered from './Pages/OrderDelivered';
+import RideDetail from './Pages/RideDetail';
+import ContactUs from './Pages/ContactUs';
+import Cart from './Pages/Cart';
 function App() {
   return (
     <div className="App">
@@ -58,6 +63,16 @@ function App() {
           <Route path="/order-detail" element={<OrderDetail />}>
           </Route>
           <Route path="/order-onway" element={<OrderOnWay />}>
+          </Route>
+          <Route path="/order-cancel" element={<OrderCancel />}>
+          </Route>
+          <Route path="/order-delivered" element={<OrderDelivered />}>
+          </Route>
+          <Route path="/ride-detail" element={<RideDetail />}>
+          </Route>
+          <Route path="/contact-us" element={<ContactUs />}>
+          </Route>
+          <Route path="/cart" element={<Cart />}>
           </Route>
           {/* end */}
         </Routes>

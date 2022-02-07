@@ -12,6 +12,16 @@ function VerifyAccountView() {
             element.nextSibling.focus();
         }
     }
+    // const handleChange = (element,index) =>{
+    //     return new promise((resolve,reject) =>{
+    //         if(isNaN(element.value)){
+    //             return false;
+    //         }
+    //         else{
+
+    //         }
+    //     })
+    // }
   return (
     <div>
          <div className="bannerSec spBanner" style={{ backgroundImage: `url('${SpBanner}')` }}>

@@ -1,10 +1,10 @@
 import React from 'react';
 import SpBanner from '../images/lamborgini.png'
 import watch from '../images/watch.png'
-function OrderOnWayView() {
+function OrderCancelView() {
   return (
     <div>
-        <div className="bannerSec spBanner" style={{ backgroundImage: `url('${SpBanner}')` }}>
+         <div className="bannerSec spBanner" style={{ backgroundImage: `url('${SpBanner}')` }}>
             <div className="WrapperBnr">
                 <div className="container bnrCon h100 p-0">
                     <div className="orderSRow">
@@ -31,9 +31,14 @@ function OrderOnWayView() {
                                             </h2>
                                         </div>
                                         <div className="orderInfo">
-                                            <div className="oiLeft">
-                                                <span><i class="fas fa-shipping-fast"></i>Your order is on the way</span>
-                                                <button className='oiBtn'>TRACK -KH0213525</button>
+                                            <div className="oiLeft orderCancel">
+                                                <span className='alertOrder'>
+                                                    <i className="fas fa-shipping-fast"></i>
+                                                    <span>
+                                                        Order has been cancelled
+                                                        <span className='cancelDate'>on Nov 23,2021</span>
+                                                    </span>                                                
+                                                </span>                                                
                                             </div>
                                             <div className="oiRt"></div>
                                         </div>
@@ -96,10 +101,11 @@ function OrderOnWayView() {
                                                 <div className='refifpaid'> 
                                                     <span><i class="fa fa-check"></i></span> Paid via credit card ending 55478  
                                                 </div>
+                                                <p>Refund Initiated</p>
                                             </div>  
                                         </div>                                                                           
                                     </div>                                    
-                                </div>                       
+                                </div>                        
                             </div>
                         </div>
                     </div>
@@ -112,4 +118,4 @@ function OrderOnWayView() {
   );
 }
 
-export default OrderOnWayView;
+export default OrderCancelView;
