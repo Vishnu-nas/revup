@@ -16,7 +16,7 @@ function RideDetail2View() {
                         <div className="row cbRow">
                             <div className="col-lg-6">
                                 <div className="cbLeft h100">
-                                    <h2>Confirm Your Booking</h2>
+                                    <h2>Ride Detail</h2>
                                     <div className="cbLcar h100">
                                         <img src={BlueCar} alt="" />
                                     </div>
