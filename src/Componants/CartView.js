@@ -7,7 +7,7 @@ function CartView() {
         setIncrement(increment + 1);
     }
     const handleDecrement = () =>{
-        if(increment != 0){
+        if(increment !== 0){
             setIncrement(increment - 1);
         }
     }

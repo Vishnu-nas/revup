@@ -2201,6 +2201,9 @@ a.revupLogo.navbar-brand img {
       opacity: 0.74;
       display: block;
       margin-bottom: 10px;
+      @include responsive(phone){
+        font: normal normal normal 14px Source Sans Pro;
+      }
     }
     .promoInput{
       display: flex;
@@ -2214,6 +2217,10 @@ a.revupLogo.navbar-brand img {
         opacity: 1;
         padding-left: 15px;
         outline: 0;
+        @include responsive(phone){
+          width: 100%;
+          font: normal normal normal 14px Source Sans Pro;
+        }
       }
       button{
         background: #F6491E 0% 0% no-repeat padding-box;
@@ -2237,6 +2244,9 @@ a.revupLogo.navbar-brand img {
         letter-spacing: 0px;
         color: #110403;
         opacity: 1;
+        @include responsive(phone){
+          font: normal normal normal 24px/61px Source Sans Pro;
+        }
       }
       .orders{
         .orderin{
@@ -2249,6 +2259,7 @@ a.revupLogo.navbar-brand img {
             letter-spacing: 0px;
             color: #110403;
             opacity: 1;
+           
            }
            &.clrOrange{
              span{
@@ -2293,6 +2304,10 @@ a.revupLogo.navbar-brand img {
           padding: 10px 30px;
           margin: auto;
           margin-right: 0;
+          @include responsive(phone){
+            font: normal normal 600 14px/26px Segoe UI !important;
+            padding: 5px 25px !important;
+          }
         }
       }
     }
@@ -3253,6 +3268,11 @@ a.revupLogo.navbar-brand img {
   background: #F6F6F6 0% 0% no-repeat padding-box;
   opacity: 1;
   padding-bottom: 60px;
+  .container{
+    @include responsive(phone){
+      padding: 0 15px !important;
+    }
+  }
 }
 .opRow{
   margin: 0 !important;
@@ -3263,7 +3283,7 @@ a.revupLogo.navbar-brand img {
   padding: 30px;
   align-items: center;
   @include responsive(tab-port){
-    margin-top: 55px !important; 
+    margin-top: 0px !important; 
   }
   .colOpLt,.colOpRt{
     padding: 0;
@@ -3332,6 +3352,10 @@ a.revupLogo.navbar-brand img {
       width: auto;
       border-radius: 4px;
       cursor: pointer;
+      @include responsive(phone){
+        padding: 5px 10px;
+        font-size: 14px;
+      }
     }
     a{
       flex-grow: 1;
@@ -3372,6 +3396,10 @@ a.revupLogo.navbar-brand img {
   align-items: end;
   justify-content: end;
   flex-direction: column;
+  @include responsive(phone){
+    justify-content: flex-start;
+    flex-direction: unset;  
+  }
   .paidviaCred{
     display: inline-flex;
     align-items: center;
@@ -3483,8 +3511,19 @@ a.revupLogo.navbar-brand img {
   padding-top: 70px;
   background: #F6F6F6 0% 0% no-repeat padding-box;
   padding-bottom: 60px;
+  .container{
+    @include responsive(phone){
+      padding: 0 15px !important;
+    }
+  }
   .calcRow{
     margin-top: 0 !important;
+  }
+  .opRow {
+    margin-top: 0 !important;
+    @include responsive(Exsmall){
+      margin-top: 60px !important;
+    }
   }
 }
 .cancelRide{
@@ -3496,6 +3535,10 @@ a.revupLogo.navbar-brand img {
   margin: auto;
   margin-right: 0;
   border-radius: 4px;
+  @include responsive(phone){
+    padding: 5px 10px;
+    font-size: 14px;
+  }
 }
 .cofirmBookingOnBnr{
   .cbRow{
@@ -3530,19 +3573,30 @@ a.revupLogo.navbar-brand img {
   opacity: 1;
   .contactRow{
     justify-content: center;
-    width: 100%;
     max-width: 70%;
     margin: auto;
     margin-top: -60px;
+    @include responsive(phone){
+      max-width: 100%;
+    }
     .FormRow{
       display: flex;
       justify-content: space-between;   
       flex-wrap: wrap;   
+      @include responsive(phone){
+        flex-direction: column;
+      }
       > div:nth-child(2n+1){
         padding-right: 10px;
+        @include responsive(phone){
+          padding-right: 0;
+        }
       }
       > div:nth-child(2n+2){
         padding-left: 10px;
+        @include responsive(phone){
+          padding-left: 0;
+        }
       }
     }
     .form-controller{
@@ -3586,6 +3640,9 @@ a.revupLogo.navbar-brand img {
       margin-right: 0;
       padding: 10px 40px;
     }
+    .register-form{
+      margin-top: 0;
+    }
   }
 }
 
@@ -3614,41 +3671,47 @@ a.revupLogo.navbar-brand img {
       &::-webkit-scrollbar {
           display: none;
       }
-  }
-  .product{
+  }  
+}
+.product{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 40px;
+  &--img{
+    flex-grow: 1;
+    width: 120px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-right: 40px;
-    &--img{
-      flex-grow: 1;
-      width: 120px;
-      display: flex;
-      height: 120px;
-      img{
-        width: 60%;
-        max-width: 100%;
-        height: 100%;
-        object-fit: contain;
+    height: 120px;
+    @include responsive(phone){
+      height: 100px;
+    }
+    img{
+      width: 60%;
+      max-width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &--name{
+    flex-grow: 1;
+    text-align: left;
+    h2{
+      font: normal normal 300 18px Source Sans Pro;
+      letter-spacing: 0px;
+      color: #110403;
+      opacity: 1;
+      margin-bottom: 0;
+      @include responsive(phone){
+        font: normal normal 300 16px Source Sans Pro;
       }
     }
-    &--name{
-      flex-grow: 1;
-      text-align: left;
-      h2{
-        font: normal normal 300 18px Source Sans Pro;
+    .stockInfo{
+      span{
+        font: normal normal normal 16px Source Sans Pro;
         letter-spacing: 0px;
-        color: #110403;
+        color: #F6491E;
         opacity: 1;
-        margin-bottom: 0;
-      }
-      .stockInfo{
-        span{
-          font: normal normal normal 16px Source Sans Pro;
-          letter-spacing: 0px;
-          color: #F6491E;
-          opacity: 1;
-        }
       }
     }
   }
@@ -3735,7 +3798,6 @@ a.revupLogo.navbar-brand img {
   margin-top: -60px;
   padding: 30px;
   padding-bottom: 0;
-  margin-bottom: 30px;
   table{
     --bs-table-striped-bg: rgb(224 224 224 / 5%);
   }
@@ -3753,6 +3815,9 @@ a.revupLogo.navbar-brand img {
     letter-spacing: 0px;
     color: #110403;
     opacity: 1;
+    @include responsive(phone){
+      font: normal normal 200 30px Source Sans Pro;
+    }
   }
   .cartRight{
     span{
@@ -3760,9 +3825,369 @@ a.revupLogo.navbar-brand img {
       letter-spacing: 0px;
       color: #F6491E;
       opacity: 1;
+      @include responsive(phone){
+        font: normal normal 300 14px/61px Source Sans Pro;
+      }
     }
   }
 }
 .itemNoStock{
   opacity: 0.4;
+}
+.payOrder{
+  padding-top: 20px;
+}
+.calcPart{
+  &.noArt
+  {
+    padding-right: 100px;
+    box-shadow: none;
+    padding-left: 0;
+    @include responsive(phone){
+      padding: 0;
+    }
+  }
+  &.noEff{
+    padding: 0;
+    box-shadow: none;
+  }
+}
+.cartMsg{
+  padding-top: 30px;
+  span{
+    font: normal normal normal 17px/51px Source Sans Pro;
+    letter-spacing: 0px;
+    color: #110403;
+    opacity: 1;
+    i{
+      margin-right: 6px;
+    }
+  }
+}
+.cartTableBody th{
+  @include responsive(phone){
+    padding: 8px !important;
+    font-size: 16px;
+  }
+}
+
+// ride list
+.ridesList{
+  tbody{
+    td{
+      vertical-align: middle;
+      padding: 30px 0;
+    }
+    tr{
+      &:last-child{
+        border-color: white;
+      }
+    }
+  }
+}
+.ride-Item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Trip{
+  @include responsive(tab-port){
+    width: 220px;
+  }
+  .bdRight {    
+    display: flex;
+    align-items: center;    
+    .bdRicon{
+      i{
+        color: #F6491E;
+        width: 15px;
+        height: 15px;
+      }
+    }
+    .bdRicon{
+      .dot{
+        background-color: #F6491E;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        display: block;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &.withWhite{
+          &::before{
+            background-color: #fff;
+            width: calc(100% - 6px);
+            height: calc(100% - 6px);
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+    .optedItem{
+      padding-left: 20px;
+      label{
+        display: block;
+        font: normal normal 300 17px Source Sans Pro;
+        letter-spacing: 0px;
+        color: #110403;
+        opacity: 0.68;
+        @include responsive(phone){
+          font: normal normal 300 14px Source Sans Pro;
+        }
+      }
+      span{
+        text-align: left;
+        font: normal normal 300 20px Source Sans Pro;
+        letter-spacing: 0px;
+        color: #110403;
+        opacity: 0.68;
+        @include responsive(phone){
+          font: normal normal 600 16px Source Sans Pro;
+        }
+      }
+      h3{
+        font: normal normal 600 28px Source Sans Pro;
+        letter-spacing: 0px;
+        color: #110403;
+        opacity: 1;
+        margin-bottom: 0;
+        @include responsive(phone){
+          font: normal normal 600 20px Source Sans Pro;
+        }
+      }
+    }
+  }
+}
+.product--name{
+  .ride{
+    &--car{
+      span{
+        display: block;
+        &.orderId{
+          font: normal normal normal 20px Source Sans Pro;
+          letter-spacing: 0px;
+          color: #110403;
+          opacity: 1;
+          @include responsive(phone){
+            font: normal normal normal 16px Source Sans Pro;
+          }
+        }
+        &.orderName{
+          font: normal normal normal 20px Source Sans Pro;
+          letter-spacing: 0px;
+          color: #110403;
+          opacity: 1;
+          @include responsive(phone){
+            font: normal normal normal 16px Source Sans Pro;
+          }
+        }
+      }
+    }
+    &--date{
+      span{
+        font: normal normal 300 20px Source Sans Pro;
+        letter-spacing: 0px;
+        color: #110403;
+        opacity: 0.68;
+        display: inline-block;
+        margin-top: 5px;
+        @include responsive(phone){
+          font: normal normal normal 16px Source Sans Pro;
+        }
+      }
+    }
+    &--info{
+      display: flex;
+      align-items: center;
+      margin-top: 30px;
+      &--thumb{
+        &__img{
+          width: 60px;
+          height: 60px;
+          margin-right: 10px;
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+        }
+      }
+      &--detail{
+        h3{
+          font: normal normal normal 18px Source Sans Pro;
+          letter-spacing: 0px;
+          color: #110403;
+          opacity: 1;
+          margin-bottom: 0;
+          @include responsive(phone){
+            font: normal normal normal 16px Source Sans Pro;
+          }
+        }
+        span{
+          font: normal normal normal 16px Source Sans Pro;
+          letter-spacing: 0px;
+          color: #F6491E;
+          opacity: 1;
+          margin-bottom: 0;
+          @include responsive(phone){
+            font: normal normal normal 14px Source Sans Pro;
+          }
+        }
+      }
+      &--status{
+        display: flex;
+        align-items: center;
+        &__left{
+          font: normal normal normal 16px Source Sans Pro;
+          letter-spacing: 0px;
+          color: #1F8722;
+          opacity: 1;
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+}
+.usedHrs{
+  @include responsive(tab-port){
+    width: 150px;
+  }
+  span{
+    font: normal normal normal 22px Source Sans Pro;
+    letter-spacing: 0px;
+    color: #F6491E;
+    opacity: 1;
+    @include responsive(tab-port){
+      font: normal normal normal 18px Source Sans Pro;
+    }
+  }
+}
+.reviewStar{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 2px;
+  i{
+    color: #FEBA1B;
+  }
+}
+.ridesWrapper{
+  padding: 30px;
+  padding-bottom: 0;
+  background-color: #fff;
+  position: relative;
+  margin-top: -60px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 48px #00000008;
+}
+.myRidesView{
+  background: #F6F6F6 0% 0% no-repeat padding-box;
+  opacity: 1;
+  padding-bottom: 60px;
+}
+.ridesHead{
+  h1{
+    font: normal normal 200 39px Source Sans Pro;
+    letter-spacing: 0px;
+    color: #110403;
+    opacity: 1;
+    @include responsive(tab-port){
+      font: normal normal 200 30px Source Sans Pro;
+    }
+  }
+}
+.cancelledRow{
+  filter: opacity(0.4);
+}
+.colOptions{
+  .userCal{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    .userLeft{
+      width: 50px;
+      height: 50px;
+      overflow: hidden;
+      display: block;
+      border-radius: 50%;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .userRt{
+      > span{
+        display: block;
+        &.usrNm{
+          font: normal normal normal 24px Source Sans Pro;
+          letter-spacing: 0px;
+          color: #110403;
+          opacity: 1;
+        }
+        &.usrInfo{
+          font: normal normal normal 20px Source Sans Pro;
+          letter-spacing: 0px;
+          color: #F6491E;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+.connect{
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  gap: 10px;
+  .connWith{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #000;
+    i{
+      color: #fff;
+    }
+  }
+  .arrival{
+    span{
+      background: #F6491E 0% 0% no-repeat padding-box;
+      border-radius: 30px;
+      opacity: 1;
+      display: inline-block;
+      padding: 10px 30px;
+      color: #fff;
+      font: normal normal normal 16px Source Sans Pro;
+    }
+  }
+}
+.colOpRt.withDetail{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include responsive(Exsmall){
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .colOptions{
+    @include responsive(Exsmall){
+      margin-bottom: 30px;
+    }
+  }
+}
+.locationRow{
+  .google-map-code{
+    padding: 0;
+    margin-top: 40px;
+  }
 }

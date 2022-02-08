@@ -8,10 +8,6 @@ function ContactView() {
                 <div className="row accRow contactRow">                    
                     <div className="col-lg-12 colRgRight p-0 align-self-center">
                         <div className="rgRtWrap">
-                            <div className="rgRtHd">
-                                <h2>Your Information</h2>
-                                <span>Please update your account information</span>
-                            </div>
                             <div action="#" class="register-form">
                                 <div className="formWrap FormRow">
                                     <div className="form-controller col-lg-6">

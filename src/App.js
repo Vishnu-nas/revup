@@ -25,6 +25,9 @@ import OrderDelivered from './Pages/OrderDelivered';
 import RideDetail from './Pages/RideDetail';
 import ContactUs from './Pages/ContactUs';
 import Cart from './Pages/Cart';
+import MyRides from './Pages/MyRides';
+import RideDetail2 from './Pages/RideDetail2';
+import RideDetail3 from './Pages/RideDetail3';
 function App() {
   return (
     <div className="App">
@@ -73,6 +76,12 @@ function App() {
           <Route path="/contact-us" element={<ContactUs />}>
           </Route>
           <Route path="/cart" element={<Cart />}>
+          </Route>
+          <Route path="/my-rides" element={<MyRides />}>
+          </Route>
+          <Route path="/ride-detail2" element={<RideDetail2 />}>
+          </Route>
+          <Route path="/ride-detail3" element={<RideDetail3 />}>
           </Route>
           {/* end */}
         </Routes>
