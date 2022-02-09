@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import BlueCar from '../images/car-blue.png';
 import SpBanner from '../images/lamborgini.png'
 import Profile from '../images/prof.jpeg'

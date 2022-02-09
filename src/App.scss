@@ -2031,6 +2031,9 @@ a.revupLogo.navbar-brand img {
         @include responsive(phone){
           font: normal normal normal 18px Source Sans Pro;
         }
+        @include responsive(Exsmall){
+          font: normal normal 300 16px Source Sans Pro;
+        }
       }
       h2{
         font: normal normal 300 31px  Source Sans Pro;
@@ -2039,6 +2042,9 @@ a.revupLogo.navbar-brand img {
         opacity: 1;
         @include responsive(phone){
           font: normal normal 300 30px Source Sans Pro;
+        }
+        @include responsive(Exsmall){
+          font: normal normal 300 24px Source Sans Pro;
         }
       }
     }
@@ -3193,11 +3199,18 @@ a.revupLogo.navbar-brand img {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
+  
   h1{
     font: normal normal 300 28px/61px Source Sans Pro;
     letter-spacing: 0px;
     color: #110403;
     opacity: 1;
+    @include responsive(phone){
+      margin-bottom: 0;
+    }
+    @include responsive(Exsmall){
+      font-size: 24px;
+    }
   }
   .report{
     display: inline-flex;
@@ -3287,6 +3300,9 @@ a.revupLogo.navbar-brand img {
   }
   .colOpLt,.colOpRt{
     padding: 0;
+    @include responsive(phone){
+      margin-top: 20px;
+    }
   }
 }
 .item-deliver{
@@ -3330,6 +3346,9 @@ a.revupLogo.navbar-brand img {
         color: #000000;
         opacity: 1;
         margin-bottom: 0;
+        @include responsive(phone){
+          font: normal normal 600 24px Source Sans Pro;
+        }
         span{
           font: normal normal 300 20px Source Sans Pro;
           letter-spacing: 0px;
@@ -3383,6 +3402,9 @@ a.revupLogo.navbar-brand img {
           h2{
             font: normal normal normal 28px Source Sans Pro;
             margin-bottom: 20px;
+            @include responsive(phone){
+              font: normal normal normal 24px Source Sans Pro;
+            }
           }    
         }
     }
@@ -4108,6 +4130,9 @@ a.revupLogo.navbar-brand img {
   .userCal{
     display: flex;
     align-items: center;
+    @include responsive(tab-port){
+      flex-wrap: wrap;
+    }
     gap:10px;
     .userLeft{
       width: 50px;
@@ -4314,6 +4339,9 @@ span.orderDate{
   align-items: center;
   gap: 10px;
   margin-top: 10px;
+  @include responsive(phone){
+    flex-wrap: wrap;
+  }
   .tipItem{
     span{
       border: 1px solid #F6491E;
@@ -4369,4 +4397,94 @@ span.orderDate{
     }
   }
   
+}
+.allRead{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  span{
+    font: normal normal normal 14px/30px Source Sans Pro;
+    letter-spacing: 0px;
+    color: #2D2D2D;
+    opacity: 1;
+    background: #EFEFEF 0% 0% no-repeat padding-box;
+    border-radius: 30px;
+    display: flex;
+    padding: 5px 15px;
+  }
+}
+.nvRow{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #e9e9e9;
+  @include responsive(phone){
+    gap: 10px;
+  }
+  .nvIcon{
+    .nvImg{
+      width: 85px;
+      height: 85px;
+      overflow: hidden;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+  }
+  .nvDec{
+    h2{
+      font: normal normal normal 24px Source Sans Pro;
+      letter-spacing: 0px;
+      color: #110403;
+      opacity: 1;
+      margin-bottom: 0;
+      @include responsive(phone){
+        font: normal normal normal 20px Source Sans Pro;
+        margin-bottom: 6px;
+      }
+    }
+    span{     
+      &.nvId{
+        font: normal normal normal 20px Source Sans Pro;
+        letter-spacing: 0px;
+        color: #110403;
+        opacity: 1;
+        display: block;
+        @include responsive(phone){
+          font: normal normal normal 16px Source Sans Pro;
+        }
+      }
+      &.nvTime{
+        font: normal normal 300 20px Source Sans Pro;
+        letter-spacing: 0px;
+        color: #110403;
+        opacity: 0.68;
+        display: block;
+        margin-top: 10px;
+        @include responsive(phone){
+          font: normal normal normal 16x Source Sans Pro;
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+}
+.nvWrap{
+  padding: 30px;
+  margin-top: -60px;
+  position: relative;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 48px #00000008;
+  opacity: 1;
+  border-radius: 12px;
+  padding-bottom: 0;
+}
+.notificationView{
+  background: #F6F6F6 0% 0% no-repeat padding-box;
+  padding-bottom: 60px;
 }
