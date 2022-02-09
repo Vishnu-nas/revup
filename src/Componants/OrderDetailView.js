@@ -89,9 +89,15 @@ function OrderDetailView() {
                                 </div>
                                 <div className="paidCred">
                                     <div class="paidviaCred">
-                                        <span><i class="fa fa-check"></i></span> Paid via credit card ending 55478
-                                    </div>
-                                </div>                        
+                                        <div className="pcredwrap">                                            
+                                            <div className="refundMsg">
+                                                <div className='refifpaid'> 
+                                                    <span><i class="fa fa-check"></i></span> Paid via credit card   
+                                                </div>
+                                            </div>  
+                                        </div>                                                                           
+                                    </div>                                    
+                                </div>                          
                             </div>
                         </div>
                     </div>

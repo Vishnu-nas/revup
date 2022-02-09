@@ -4191,3 +4191,182 @@ a.revupLogo.navbar-brand img {
     margin-top: 40px;
   }
 }
+span.orderId{
+  font: normal normal normal 20px Source Sans Pro !important;
+  color: #F6491E !important;
+}
+span.orderDate{
+  font: normal normal 300 20px Source Sans Pro !important;
+  color: #110403;
+  opacity: 0.68 !important;
+}
+.rideInfo{
+  padding-top: 15px;
+  span{
+    font: normal normal normal 20px Source Sans Pro;
+    letter-spacing: 0px;
+    color: #1F8722;
+  }
+}
+.ratingReview{
+  padding-top: 50px;
+  padding-right: 70px;
+  @include responsive(tab-port){
+    padding-right: 0;
+  }
+  .rating{
+    h3{
+      font: normal normal normal 24px Source Sans Pro;
+      letter-spacing: 0px;
+      color: #110403;
+      opacity: 1;
+      margin-bottom: 5px;
+    }
+    .ratingAlter{
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      .ratingStars{
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        span{
+          color: #FEBA1B;
+          font-size: 25px;
+        }
+      }
+      .reviewEdit{
+        button{
+          font: normal normal normal 14px Source Sans Pro;
+          letter-spacing: 0px;
+          color: #2D2D2D;
+          background: #EFEFEF 0% 0% no-repeat padding-box;
+          border-radius: 30px;
+          border: none;
+          padding: 8px 15px;
+        }
+      }
+    }
+    .reviewDec{
+      p{
+        font: normal normal 300 20px/30px Source Sans Pro;
+        letter-spacing: 0px;
+        color: #110403;
+        opacity: 1;
+        margin-bottom: 0;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+.bdrTp{
+  border-top: 1px solid #dedede;
+  padding-top: 15px;
+}
+.tickOk{
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1F8722 0% 0% no-repeat padding-box;
+  border-radius: 50%;
+  margin-bottom: 0;
+  padding: 10px;
+  font-size: 15px;
+  margin-right: 10px;
+  margin-bottom: 0;
+  i{
+    color: #fff;
+    font-size: 15px;
+  }
+}
+.infoLine{
+  display: flex;
+  align-items: center;
+}
+.addReview{
+  margin-top: 20px;
+  label{
+    font: normal normal 300 15px Source Sans Pro;
+    letter-spacing: 0px;
+    color: #110403;
+    opacity: 0.74;
+    margin-bottom: 5px;
+  }
+  textarea{
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    outline: 0;
+    font-size: 15px;
+    box-sizing: border-box;
+    background-color: #FCFCFC !important;
+    box-shadow: 0px 0px 2px #0000000a;
+    border: 1px solid #E1E1E1;
+    border-radius: 4px;
+  }
+}
+.tipPay{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  .tipItem{
+    span{
+      border: 1px solid #F6491E;
+      border-radius: 4px;
+      opacity: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 15px;
+      color:#F6491E;
+      cursor: pointer;
+    }
+  }
+}
+.customAmt{
+  margin-top: 20px;
+  label{
+    font: normal normal 300 15px Source Sans Pro;
+    letter-spacing: 0px;
+    color: #110403;
+    opacity: 0.74;
+    margin-bottom: 10px;
+  }
+  .cusInpBtn{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    @include responsive(phone){
+      width: 100%;
+    }
+    input{
+      width: 100%;
+      border: 0;
+      margin: 0 0 15px;
+      padding: 15px;
+      outline: 0;
+      font-size: 15px;
+      box-sizing: border-box;
+      background-color: #FCFCFC !important;
+      box-shadow: 0px 0px 2px #0000000a;
+      border: 1px solid #E1E1E1;
+      border-radius: 4px;
+      margin-bottom: 0;
+    }
+    button{
+      border: none;
+      cursor: pointer;
+      background: #F6491E 0% 0% no-repeat padding-box;
+      border-radius: 4px;
+      opacity: 1;
+      color: #fff;
+      padding: 10px 45px;
+    }
+  }
+  
+}

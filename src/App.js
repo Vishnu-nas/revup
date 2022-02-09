@@ -28,6 +28,8 @@ import Cart from './Pages/Cart';
 import MyRides from './Pages/MyRides';
 import RideDetail2 from './Pages/RideDetail2';
 import RideDetail3 from './Pages/RideDetail3';
+import RideDetail4 from './Pages/RideDetail4';
+import RideDetail5 from './Pages/RideDetail5';
 function App() {
   return (
     <div className="App">
@@ -82,6 +84,10 @@ function App() {
           <Route path="/ride-detail2" element={<RideDetail2 />}>
           </Route>
           <Route path="/ride-detail3" element={<RideDetail3 />}>
+          </Route>
+          <Route path="/ride-detail4" element={<RideDetail4 />}>
+          </Route>
+          <Route path="/ride-detail5" element={<RideDetail5 />}>
           </Route>
           {/* end */}
         </Routes>
