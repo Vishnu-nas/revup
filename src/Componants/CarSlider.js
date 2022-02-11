@@ -1,10 +1,10 @@
 import React from 'react';
 import Slider from "react-slick";
-import {imgPath} from "../Componants/Constants"
 import Car1 from '../images/car1.png'
 import Car2 from '../images/car2.png'
 import Car3 from '../images/car3.png'
 import { useRef } from 'react'
+import {Link} from 'react-router-dom'
 function CarSlider() {
     //const [current, setCurrent] = useState(0);
     const sliderRef = useRef(null);
@@ -66,7 +66,7 @@ function CarSlider() {
                         <span><i class="fa fa-star" aria-hidden="true"></i> 4.9 </span>
                         <span class="r-count">Reviews (254)</span>
                     </div>
-                    <button className='pickBtn'>PICK THIS CAR ($300.00/h)</button>
+                    <Link to="/login" ><button className='pickBtn'>PICK THIS CAR ($300.00/h)</button></Link>                    
                 </div>
             </div>
             <div className="carSlItem">
@@ -79,7 +79,7 @@ function CarSlider() {
                         <span><i class="fa fa-star" aria-hidden="true"></i> 4.9 </span>
                         <span class="r-count">Reviews (254)</span>
                     </div>
-                    <button className='pickBtn'>PICK THIS CAR ($300.00/h)</button>
+                    <Link to="/login" ><button className='pickBtn'>PICK THIS CAR ($300.00/h)</button></Link> 
                 </div>
             </div>
             <div className="carSlItem">
@@ -92,7 +92,8 @@ function CarSlider() {
                         <span><i class="fa fa-star" aria-hidden="true"></i> 4.9 </span>
                         <span class="r-count">Reviews (254)</span>
                     </div>
-                    <button className='pickBtn'>PICK THIS CAR ($300.00/h)</button>
+
+                    <Link to="/login" ><button className='pickBtn'>PICK THIS CAR ($300.00/h)</button></Link> 
                 </div>
             </div>
             <div className="carSlItem">
@@ -105,7 +106,7 @@ function CarSlider() {
                         <span><i class="fa fa-star" aria-hidden="true"></i> 4.9 </span>
                         <span class="r-count">Reviews (254)</span>
                     </div>
-                    <button className='pickBtn'>PICK THIS CAR ($300.00/h)</button>
+                    <Link to="/login" ><button className='pickBtn'>PICK THIS CAR ($300.00/h)</button></Link> 
                 </div>
             </div>
             <div className="carSlItem">
@@ -118,7 +119,7 @@ function CarSlider() {
                         <span><i class="fa fa-star" aria-hidden="true"></i> 4.9 </span>
                         <span class="r-count">Reviews (254)</span>
                     </div>
-                    <button className='pickBtn'>PICK THIS CAR ($300.00/h)</button>
+                    <Link to="/login" ><button className='pickBtn'>PICK THIS CAR ($300.00/h)</button></Link> 
                 </div>
             </div>
             <div className="carSlItem">
@@ -131,7 +132,7 @@ function CarSlider() {
                         <span><i class="fa fa-star" aria-hidden="true"></i> 4.9 </span>
                         <span class="r-count">Reviews (254)</span>
                     </div>
-                    <button className='pickBtn'>PICK THIS CAR ($300.00/h)</button>
+                    <Link to="/login" ><button className='pickBtn'>PICK THIS CAR ($300.00/h)</button></Link> 
                 </div>
             </div>
         </Slider>

@@ -1,6 +1,7 @@
 import React from 'react';
 import SpBanner from '../images/lamborgini.png';
 import regBg from '../images/regImg.png';
+import {Link} from 'react-router-dom'
 function UserInfoView() {
   return (
     <div>
@@ -50,7 +51,7 @@ function UserInfoView() {
                                     </div>
                                 </div>
                                 <p class="message pptu">By signing up, you're agree to our <a href="#">Privacy Policy & Terms of User</a></p>
-                                <button type="submit" class="btn">CREATE ACCOUNT</button>
+                                <Link to="/login" ><button type="submit" class="btn">CREATE ACCOUNT</button></Link>
                             </div> 
                         </div>
                     </div>

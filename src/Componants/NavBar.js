@@ -19,8 +19,8 @@ function NavBar() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto1">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#link">Shop</Nav.Link>
+                <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link href="/shop">Shop</Nav.Link>
                 {/* <NavDropdown title="Services" id="basic-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -29,9 +29,9 @@ function NavBar() {
                 </NavDropdown> */}
                 <Nav.Link href="#Works">How it Works</Nav.Link>
                 <Nav.Link href="#FAQ">FAQ's</Nav.Link>
-                <Nav.Link href="#Contact">Contact</Nav.Link>
-                <Nav.Link href="#Login" className='loginRup menuReg'>Login</Nav.Link>
-                <Nav.Link href="#Sign Up" className='signRup menuReg'>Sign Up</Nav.Link>
+                <Nav.Link href="/contact-us">Contact</Nav.Link>
+                <Nav.Link href="/login" className='loginRup menuReg'>Login</Nav.Link>
+                <Nav.Link href="/create-account" className='signRup menuReg'>Sign Up</Nav.Link>
             </Nav>
             </Navbar.Collapse>
         </Container>

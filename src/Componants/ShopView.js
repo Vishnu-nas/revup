@@ -1,6 +1,7 @@
 import React from 'react';
 import tshirt from '../images/tshirt.png'
 import watch from '../images/watch.png'
+import {Link} from 'react-router-dom'
 function ShopView() {
   return (
     <div className='shopWrapper'>
@@ -37,6 +38,7 @@ function ShopView() {
                 </div>
                 <div className="shopList row">
                     <div className="col-lg-3 col-sm-6 col-12 p-0">
+                        <Link to="/shop-detail" className='linkTo'>
                         <div className="productItem">
                             <div className="prodThumb">
                                 <img src={tshirt} alt="" />
@@ -49,6 +51,7 @@ function ShopView() {
                                 <span className='prodPrice'>$299</span>
                             </div>
                         </div>
+                        </Link>
                     </div>
                     <div className="col-lg-3 col-sm-6 col-12 p-0">
                         <div className="productItem">

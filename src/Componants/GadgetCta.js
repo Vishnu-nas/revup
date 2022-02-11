@@ -1,7 +1,7 @@
 import React from 'react';
 import ctaBg from '../images/ctahm.png' 
 import shirt from '../images/shirt.png'
-
+import {Link} from 'react-router-dom'
 function GadgetCta() {
   return (
     <div className="shopCta">
@@ -11,7 +11,7 @@ function GadgetCta() {
                     <div className="shpGadL">
                         <span>SHOP GADGETS</span>
                         <h2>Deliver to Anywhere in the World</h2>
-                        <button>Shop</button>
+                        <Link to="/shop" ><button>Shop</button></Link> 
                     </div>
                 </div>
                 <div className="col-lg-4 h100 colSctaRight">

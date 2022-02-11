@@ -1176,6 +1176,7 @@ a.revupLogo.navbar-brand img {
           text-transform: uppercase;
           opacity: 1;
           border-radius: 4px;
+          background-color: #fff;
           @include responsive(phone){
             padding: 10px 30px;
             margin-top: 20px;
@@ -4487,4 +4488,10 @@ span.orderDate{
 .notificationView{
   background: #F6F6F6 0% 0% no-repeat padding-box;
   padding-bottom: 60px;
+}
+a{
+  text-decoration: none !important;
+  span{
+    color: #000;
+  }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import SpBanner from '../images/lamborgini.png';
 import regBg from '../images/regImg.png';
-
+import {Link} from 'react-router-dom'
 function CreateAccountView() {
   return (
     <div>
@@ -38,7 +38,7 @@ function CreateAccountView() {
                                         <input type="text" name="email" placeholder="Mobile" />
                                     </div>
                                 </div>
-                                <button type="submit" class="btn">Next</button>
+                                <Link to="/verify-account" ><button type="submit" class="btn">Next</button></Link>
                             </div> 
                         </div>
                     </div>

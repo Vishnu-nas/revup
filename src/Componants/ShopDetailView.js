@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import watch from '../images/watch.png'
 import tshirt from '../images/tshirt.png'
 import CustomerReview from '../Componants/CustomerReview';
+import {Link} from 'react-router-dom'
 function ShopDetailView() {
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
@@ -137,8 +138,8 @@ function ShopDetailView() {
                   </div>
                 </div>
                 <div className="sppageBtns">
-                  <button className="addTocartBtn">ADD TO CART</button>
-                  <button className="buyNowBtn">BUY NOW</button>
+                <Link to="/cart" ><button className="addTocartBtn">ADD TO CART</button> </Link>
+                <Link to="/product-confirm-booking" ><button className="buyNowBtn">BUY NOW</button> </Link>                  
                 </div>
               </div>
             </div>

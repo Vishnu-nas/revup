@@ -1,6 +1,7 @@
 import React from 'react';
 import SpBanner from '../images/lamborgini.png';
 import regBg from '../images/regImg.png';
+import {Link} from 'react-router-dom'
 function LoginView() {
   return (
     <div>
@@ -44,7 +45,7 @@ function LoginView() {
                                 <div className="forgetPass">
                                 <p class="fp"><a href="#">Forgot Password</a></p>
                                 </div>
-                                <button type="submit" class="btn">Login</button>
+                                <Link to="/car-detail" ><button type="submit" class="btn">Login</button></Link>                                
                                 <p class="message">New User? <a href="#">Register</a></p>
                             </div> 
                         </div>

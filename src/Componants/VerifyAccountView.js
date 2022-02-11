@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import SpBanner from '../images/lamborgini.png';
 import regBg from '../images/regImg.png';
+import {Link} from 'react-router-dom'
 function VerifyAccountView() {
     const [OTP, setOTP] = useState(new Array(6).fill(""));
     const handleChange = (element,index) =>{
@@ -12,16 +13,6 @@ function VerifyAccountView() {
             element.nextSibling.focus();
         }
     }
-    // const handleChange = (element,index) =>{
-    //     return new promise((resolve,reject) =>{
-    //         if(isNaN(element.value)){
-    //             return false;
-    //         }
-    //         else{
-
-    //         }
-    //     })
-    // }
   return (
     <div>
          <div className="bannerSec spBanner" style={{ backgroundImage: `url('${SpBanner}')` }}>
@@ -70,8 +61,9 @@ function VerifyAccountView() {
                                            );
                                        })
                                    }
-                                </form>                     
-                                <button type="submit" class="btn">Next</button>
+                                </form>   
+                                <Link to="/user-info" ><button type="submit" class="btn">Next</button></Link>                  
+                                
                                 <div className="noCode">
                                     <p class="fp">Don't receive code? <a href="#">Resend</a></p>
                                 </div>
