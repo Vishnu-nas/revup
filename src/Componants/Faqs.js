@@ -2,7 +2,8 @@ import React from 'react';
 import {Accordion} from 'react-bootstrap';
 function Faqs() {
   return (
-    <div>        
+    <div>  
+              
         <div className="faqsSec pt60 pb60">
             <div className="container">
                 <div className="secHd">
