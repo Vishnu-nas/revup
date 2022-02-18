@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import Cards from '../images/cards.png'
 import BlueCar from '../images/car-blue.png';
-import MasterCard from '../images/master.png';
+import MasterCard from '../images/master.png'; 
+import AddCard from './AddCard'; 
 function Tabs() {
  const [toggle,setToggle] = useState(1);
  const [extraClass, setExtraClass] = useState(1);
+ const [addCard, setAddCard] = useState(false);
  const invertClass = (e) => 
  {
     setExtraClass(e);
@@ -13,8 +15,13 @@ function Tabs() {
     console.log("test",e);
     setToggle(e);
  }
+ const handleAddCardClose = () => setAddCard(false);
+ const handleAddCardShow = () => setAddCard(true);
   return (
     <div>
+        {
+            addCard === true && <AddCard handleAddCardClose={handleAddCardClose} addCard={addCard}/>
+        }
         <div className="payMethods">
             <div className="container">
                 <div className="pmRow">
@@ -101,7 +108,7 @@ function Tabs() {
                                             </label>
                                         </div>
                                         <div className="addCardBtn">
-                                            <button className='acBtn'>
+                                            <button className='acBtn' onClick={handleAddCardShow}>
                                                 <span>+</span> ADD YOUR CARD
                                             </button>
                                         </div>

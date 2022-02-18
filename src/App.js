@@ -55,7 +55,6 @@ function App() {
           <Route path="/thank-you" element={<ThankYou />}>
           </Route>
 
-
           {/* Shop products */}
 
           <Route path="/shop" element={<Shop />}>
