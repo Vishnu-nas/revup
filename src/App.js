@@ -31,6 +31,8 @@ import RideDetail3 from './Pages/RideDetail3';
 import RideDetail4 from './Pages/RideDetail4';
 import RideDetail5 from './Pages/RideDetail5';
 import Notifications from './Pages/Notifications';
+import ProfileView from './Pages/ProfileView';
+import Terms from './Pages/Terms';
 function App() {
   return (
     <div className="App">
@@ -90,6 +92,10 @@ function App() {
           <Route path="/ride-detail5" element={<RideDetail5 />}>
           </Route>
           <Route path="/notifications" element={<Notifications />}>
+          </Route>
+          <Route path="/profile-view" element={<ProfileView />}>
+          </Route>
+          <Route path="/terms" element={<Terms />}>
           </Route>
           {/* end */}
         </Routes>

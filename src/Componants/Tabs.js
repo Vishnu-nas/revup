@@ -25,31 +25,31 @@ function Tabs() {
         <div className="payMethods">
             <div className="container">
                 <div className="pmRow">
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li class="nav-item">
+                    <ul className="nav nav-tabs" role="tablist">
+                        <li className="nav-item">
                             <span 
-                            class={"nav-link " + ( toggle === 1 ? "active" : "")} 
+                            className={"nav-link " + ( toggle === 1 ? "active" : "")} 
                             data-toggle="tab" role="tab"
                             onClick={() =>handleToggle(1)}
                             >Add Payment method</span>
                         </li>
-                        <li class="nav-item">
+                        <li className="nav-item">
                             <span 
-                            class={"nav-link " + ( toggle === 2 ? "active" : "")} 
+                            className={"nav-link " + ( toggle === 2 ? "active" : "")} 
                             data-toggle="tab" role="tab"
                             onClick={() =>handleToggle(2)}
                             >Confirm Booking</span>
                         </li>
                     </ul> 
-                    <div class="tab-content">
-                        <div class={"tab-pane " + ( toggle === 1 ? "active" : "")}  id="tabs-1" role="tabpanel">
+                    <div className="tab-content">
+                        <div className={"tab-pane " + ( toggle === 1 ? "active" : "")}  id="tabs-1" role="tabpanel">
                             <div className="paneWrap">
                                 <div className="row pwRow">
                                     <div className="col-lg-6">
                                         <h2>Your Payment Method</h2>
                                         <div className="pmLeft">
                                             <label className='bkCredHd'>
-                                                <div className="ptBank" for="q1-n">
+                                                <div className="ptBank">
                                                     <div className="bankNm nmbk">
                                                         <span></span>
                                                     </div>
