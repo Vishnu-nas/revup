@@ -5,7 +5,7 @@ function Faqs() {
     <div>              
         <div className="faqsSec pt60 pb60">
             <div className="container">
-                <div className="secHd">
+                <div className="secHd"> 
                     <span>FAQ'S</span>
                     <h2>Do you have any question?</h2>
                 </div>
